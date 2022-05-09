@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Jogo {
+public class Menu {
     //Menu do jogo com 3 opções para o jogador.//
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
