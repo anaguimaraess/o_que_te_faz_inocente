@@ -61,5 +61,5 @@ public class Menu {
 
             }
 
-        }while (iniciar != 4);
+        }while (iniciar != 4 && iniciar != 1);
     }}
