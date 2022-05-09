@@ -6,8 +6,11 @@ public class Jogo {
         Scanner input = new Scanner(System.in);
         int iniciar;
         do {
-            System.out.println("Inicio de Jogo");
-            System.out.println("Menu do jogo \n\n << 1-Iniciar | 2-Personagens | 3-Créditos >>");
+            System.out.println("<----------------->\n"
+                    + ">>Inicio de Jogo!<<\n"
+                    + "<<==============>>");
+            System.out.println(" >>Menu do jogo<< \n<<==============>>"
+                    + "\n\n <<= 1-Iniciar | 2-Personagens | 3-Créditos | 4-Fechar jogo =>>");
             iniciar = input.nextInt();
 
 //Usei o switch case para criar um menu de opções onde o jogador pode decidir se ele prefere ir direto ao jogo, informações sobre personagens ou créditos.//
@@ -47,7 +50,10 @@ public class Jogo {
                             + "<===================================>"
                             + "\n->Jenifer Mirela Sousa Alves\n"
                             + "<===========================================>\n"
-                            + "Nosso jogo foi criado com muito entusiamos, carinho e dedicação, esperamos que você se divirta jogando igual a nós programando! (>.<) .");
+                            + "Nosso jogo foi criado com muito entusiamos, carinho e dedicação, esperamos que você se divirta jogando igual a nós programando! (>.<).\n");
+                    break;
+                case 4:
+                    System.out.println("|===============|\n Jogo encerrado!\n|===============|\n  Até a próxima!\n      ^-^\n|===============|");
                     break;
                 default:
 
@@ -55,6 +61,5 @@ public class Jogo {
 
             }
 
-        }while (iniciar != 1);
+        }while (iniciar != 4);
     }}
-
