@@ -1,5 +1,4 @@
-
-    import java.util.Scanner;
+  import java.util.Scanner;
     import java.util.concurrent.TimeUnit;
 
     public class Jogo {
@@ -145,6 +144,7 @@
                         }
                     /*
                              Primeira parte história 3 ate o primeiro desafio.
+
                     boolean condicaoResposta = false; int tentativas = 0, erroJogadas=0,acertos=0;
                     System.out.println("Enquanto Kevin se prepara para jogar, Tyler que perdeu no “perguntados”, diz que vai para a cozinha, \n" +
                     "nisso Kevin pega o controle e esperar subir vídeo para jogar. \n" +
@@ -160,6 +160,7 @@
                     System.out.println ("Tyler observa o quarto todo bagunçado, e vê no chão o celular de jade meio escondido no meio de alguns papeis, \n" +
                             "então sem jade perceber ele pega o celular dela e vê que tem várias \n" +
                             "chamadas e mensagens de Kevin e acha estranho ");
+
                     System.out.println("________DESAFIO________\n\n" + //primeiro desafio da história 3
                             "Tyler movido pela sua curiosidade pega o celular de sua irmã\n" +
                             "para acessa-lo preisar descobrir a senha. \n" +
@@ -197,6 +198,7 @@
                     System.out.println("....");
                     System.out.println ("Enquanto Tyler e Jade discutem, Kevin que estava tentando jogar videogame vê que está demorando demais para o jogo iniciar e decide ir atras de Tyler \n " +
                             "para avisar que o jogo pode estar com problemas e nisso ele acaba ouvindo a discussão de Tyler e Jade  ");
+
                     */
                         break;
                     case 2:
