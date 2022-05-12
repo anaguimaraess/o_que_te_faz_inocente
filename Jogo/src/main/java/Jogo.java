@@ -26,7 +26,7 @@ public class Jogo {
                     int kevin, tyler, comparar = 0;
 
                     System.out.println("____Introdução___");
-                    System.out.println("Durante uma tarde de verão, enquanto Kevin jogava batatinha online com seu amigo Tyler, " +
+                    System.out.println("\nDurante uma tarde de verão, enquanto Kevin jogava batatinha online com seu amigo Tyler, " +
                             "\n sua mãe pede para que ele pause o jogo online para que ela possa limpar a mesa e ele se irrita, " +
                             "\ne seu amigo Tyler ouve e o convida para ir até sua casa, ele aceita e vai até a casa dele, " +
                             "\nao chegar lá, Kevin diz:");
@@ -69,80 +69,88 @@ public class Jogo {
                                 System.out.println("Kevin escolheu Tesoura");
                                 break;
                         }
+                        if (kevin == tyler) {
+                            System.out.println("Empate! Ninguém ganhou.");
 
                     } while (kevin == tyler);
-                    if(kevin == tyler && tyler == kevin) {
-                        System.out.println("Empate! Ninguém ganhou.");
-                    }else
                     if((kevin == 1 && tyler == 3) || (kevin == 2 && tyler == 1) || (kevin == 3 && tyler == 2)) {
                         System.out.println("Kevin ganhou!");
-
+                        comparar = 2;
                     } else {
+                        comparar = 1;
                         System.out.println("Tyler ganhou!");
                     }
                     switch (comparar) {
                         case 1:
-                            System.out.println("\n\nKevin depois de perder, sai do quarto e se encontra com Jade no corredor,"
-                                    + "\nque o chama e pede um favor, que ele vá até seu quarto para pegar uma caixa em cima de "
-                                    + "\nseu guarda-roupas, porque ela não alcança."
-                                    + "\nAo pegar a caixa, Kevin percebe que caiu algumas folhas, e entre elas percebe uma anotação"
-                                    + "\ncom intruções em enigma. E pela data, ele associa que aconteceria hoje, então ele a entrega "
-                                    + "\na caixa e finge que não notou nada.");
+                            System.out.println("____História 1____");
 
-                            System.out.println("\nENIGMA: É PRETO QUANDO VOCÊ O COMPRA, VERMELHO QUANDO VOCÊ O USA E CINZA QUANDO VOCÊ"
-                                    + "\nO JOGA FORA.");
+                        case 2:
+                            System.out.println("____História 2____");
+                            System.out.println("\nPensamento do Kevin: “Acho que a Jade está no quarto...Estou sentindo o cheiro do perfume" +
+                                    "\ndela daqui! Que por sinal é muito bom, acho que vou arrumar desculpa para ir até lá”.");
+                            System.out.println("\nKevin precisa finalizar o jogo para poder ir procurar a Jade.");
+                            System.out.println("\nResponda as próximas perguntas do jogo para poder finalizar.");
 
-                            System.out.println("\nKevin: Toma aqui pô, eai, tranquila?");
-                            System.out.println("Jade: Estou indo...");
-                            System.out.println("Kevin: Se precisar, só dar um grito");
-                            System.out.println("Jade: Fechou, valeu");
-
-                            System.out.println("\nKevin vai ao banheiro e lá começa a refletir sobre o que viu, e acaba ficando intrigado "
-                                    + "\ncom a anotação, e tenta entender o que estava escrito."
-                                    + "\nEle decide ajuda-la em segredo. Tendo em vista que o enigma é a senha de entrada para tal lugar, após"
-                                    + "\ndescobrir isso, Kevin guarda essas informações para si, e volta para o quarto."
-                                    + "\nEnquanto jogam, Kevin nota que Jade tenta sair de forma suspeita, como se estivesse algo a esconder, Kevin "
-                                    + "\ndecidido em ajuda-la, ele finge que sua mãe está ligando e diz que vai ao andar de baixo atende-la, e lá se"
-                                    + "\nencontra com Jade, que age de maneira estranha.");
-
-                            System.out.println("\nKevin: Você parece meio tensa, aconteceu algo?");
-                            System.out.println("Jade: Não, eu tenho um compromisso urgente agora.");
-                            System.out.println("Kevin: Precisa de ajuda, ou algo do tipo? \n");
-                            System.out.println("Jade se irrita com Kevin perguntando mais do que deve \n");
-                            System.out.println("Jade: Não precisa, eu me viro sozinha! \n");
-                            System.out.println("Kevin fica desconfiado \n");
-                            System.out.println("Kevin: Ok então.\n");
-
-                            System.out.println("Jade sai pela porta e Kevin fica indeciso se vai atrás ou não. Até que decide ir, mas antes, corre para "
-                                    + "\navisar Tyler que precisa sair ugentemente, mas não se explica."
-                                    + "\nJade vê que Kevin está atrás dela e como ela não sabe dirigir, acaba pedindo a ajuda dele, já que ele está tão determinado"
-                                    + "\na ajuda-la. Ela pede para ele leva-la em um certo local, e ele claro, ele aceita, mas Jade pede que quando chegar, que ele fique no carro"
-                                    + "\naté que ela volte. Ele concorda.");
-                            System.out.println("Durante o caminho, Kevin não resiste e acaba perguntando o que está acontecendo.");
-                            System.out.println("\nJade: A verdade é que estou devendo para um agiota, mas ninguém pode saber, então não se mete!");
-
-                            System.out.println("\nKevin fica em silêncio");
-
-                            System.out.println("\nAo chegar no local, ela sai do carro, e se encaminha até a porta vermelha em um beco, enquanto Kevin espera por ela, ele percebe"
-                                    + "\nque antes de entrar ela diz algo ao segurança, que está guardando a porta, após isso, ele permite sua entrada."
-                                    + "\nApós algum tempo ele decide ir até ela, mesmo com medo, ele desce do carro, e nervoso vai até a porta, chegando lá o segurança o encara e"
-                                    + "\npergunta o que ele quer, Kevin pede para entrar e o segurança solicita a senha de entrada: ");
-
-                            String senha;
+                            String pergunta1;
                             do {
-                                System.out.println("Digite a senha: ");
-                                senha = sc.next();
-                                if (senha.equals("Carvão")) {
-                                    System.out.println("Acesso liberado \n");
+                                System.out.println("\nDe quem é a famosa frase 'PENSO, LOGO EXISTO'?: ");
+                                pergunta1 = sc.next();
+                                if (pergunta1.equals("Descartes")) {
+                                    System.out.println("Certa resposta");
                                     break;
                                 } else {
-                                    System.out.println("Senha inválida");
-                                    System.out.println("DICA: PAPEL QUE ESTAVA EM CIMA DO ARMÁRIO.");
+                                    System.out.println("Você errou");
                                 }
-                            } while (senha.equals(senha));
+                            }while(pergunta1.equals(pergunta1));
 
+                            String pergunta2;
+                            do {
+                                System.out.println("Quantas casas decimais tem o número pi?" +
+                                        "\nA) 50" +
+                                        "\nB) Infinitas" +
+                                        "\nC) 7");
+                                pergunta2 = sc.next();
+                                if (pergunta2.equals("B")) {
+                                    System.out.println("Certa Resposta");
+                                    break;
+                                } else {
+                                    System.out.println("Você errou");
+                                }
+                            }while(pergunta2.equals(pergunta2));
 
-                            System.out.println("\nKevin entra com a senha");
+                            int pergunta3 ;
+                            do {
+                                System.out.println("Qual a montanha mais alta do Brasil?" +
+                                        "\n1) Pico da neblina" +
+                                        "\n2) Pico da bandeira" +
+                                        "\n3) Pedra da mina");
+                                pergunta3 = sc.nextInt();
+                                if (pergunta3==1) {
+                                    System.out.println("Parabéns você acertou todas");
+                                } else {
+                                    System.out.println("Você errou, tente novamente");
+                                }
+                            }while(pergunta3!=1);
+                            break;
+                        default:
+                            break;
+                    }
+                        System.out.println("\nPensamento do Kevin: “Ufa, consegui terminar o jogo, agora vou falar que vou ao banheiro”.");
+                        System.out.println("\nKevin fala que vai ir ao banheiro e diz para Tyler ir jogando. Mas na verdade Kevin vai procurar Jade e para sua sorte," +
+                                "\nouve um barulho de caixa caindo e a voz dela dizendo “aaaii, essa merda de caixa pesada!”. E então ele segue o som e vai ao quarto dela.");
+                        int entrar = 0, esperar = 0;
+                        do {
+                            System.out.println("\nEscolha qual decisão você quer: " +
+                                    "\n1 - Entrar no quarto" +
+                                    "\n2 - Esperar na porta");
+                            entrar = sc.nextInt();
+                        }while(kevin == entrar);
+                        if (entrar == 1) {
+                            System.out.println("\nKevin entra e vê Jade tirando a caixa de cima dela e ao tentar ajudar a pegar os papéis que caíram, Jade diz:" +
+                                    "“\nNão preciso de ajuda, não toca nesses papéis!”, pega os papéis, guarda de volta na caixa e sai, dizendo “Espere aqui, não se mexe.” ");
+                        } else {
+                            System.out.println("\nKevin ouve Tyler saindo do quarto e assustado, se esconde.");
+                        }
                     }
                     /*
                              Primeira parte história 3 ate o primeiro desafio.
