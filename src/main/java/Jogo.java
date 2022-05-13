@@ -22,8 +22,8 @@ public class Jogo {
                 case 1:
                     System.out.println("Começo da História");
 
-
-                    //Historia3, a ser ligada a decisão na Histora 2
+                    /*
+                     //Historia3, a ser ligada a decisão na Histora 2
                     boolean condicaoResposta = false; int tentativas = 0, erroJogadas=0,acertos=0;
                     System.out.println("Enquanto Kevin se prepara para jogar, Tyler que perdeu no “perguntados”, diz que vai para a cozinha, \n" +
                             "nisso Kevin pega o controle e esperar subir vídeo para jogar. \n" +
@@ -213,7 +213,7 @@ public class Jogo {
                     System.out.println("Tyler chorando, fica indeciso se abandona o amigo ou não, enquanto jade o chama para ir logo embora...\n\n");
                     System.out.println("Então, mesmo com medo, Tyler decide ir com Jade e os dois fogem o mais rápido o possível, abandonado Kevin no local.\n\n");
                     //( deixar o final um pouco mais emocinante)
-
+                */
                     break;
 
                 case 2:System.out.println("\n  <<Aqui vai algumas informações básicas sobre o jogo.>>\n"
