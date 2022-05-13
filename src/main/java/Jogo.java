@@ -1,4 +1,5 @@
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
@@ -21,61 +22,198 @@ public class Jogo {
                 case 1:
                     System.out.println("Começo da História");
 
-                    /*
-                             Primeira parte história 3 ate o primeiro desafio.
+
+                    //Historia3, a ser ligada a decisão na Histora 2
                     boolean condicaoResposta = false; int tentativas = 0, erroJogadas=0,acertos=0;
                     System.out.println("Enquanto Kevin se prepara para jogar, Tyler que perdeu no “perguntados”, diz que vai para a cozinha, \n" +
-                    "nisso Kevin pega o controle e esperar subir vídeo para jogar. \n" +
-                    "Enquanto Tyler vai para a cozinha, no meio do caminho ele houve um barulho estranho" +
-                    " vindo do quarto da sua irmã e vai ver o que está acontecendo \n");
+                            "nisso Kevin pega o controle e esperar subir vídeo para jogar. \n" +
+                            "Enquanto Tyler vai para a cozinha, no meio do caminho ele houve um barulho estranho" +
+                            "vindo do quarto da sua irmã e vai ver o que está acontecendo \n");
                     TimeUnit.SECONDS.sleep(3);
-                    System.out.println("TYLER: Oooooow, que barulho é esse, vai quebrar a casa é? \n");
-                    //System.out.println("apter enter pra contiar ver a historia...");
-                    //String String = sc.nextLine();
-                    TimeUnit.SECONDS.sleep(4);
-                    System.out.println("JADE: Fica na sua, e não se mete !!!\n\n");
-                    TimeUnit.SECONDS.sleep(3);
-                    System.out.println ("Tyler observa o quarto vtodo bagunçado, e vê no chão o celular de jade meio escondido no meio de alguns papeis, \n" +
-                            "então sem jade perceber ele pega o celular dela e vê que tem várias \n" +
-                            "chamadas e mensagens de Kevin e acha estranho ");
-                    System.out.println("________DESAFIO________\n\n" + //primeiro desafio da história 3
-                            "Tyler movido pela sua curiosidade pega o celular de sua irmã\n" +
-                            "para acessa-lo preisar descobrir a senha. \n" +
-                            "A senha foi criada  com base nos algarismos romanos\n" +
-                            "e na seguinte senquencia \n" +
-                            "Maria\n" +
-                            "jaDe\n" +
-                            "tayLer\n" +
-                            "keVIn\n");
+                    System.out.println("Tyler: Oooooow, que barulho é esse, vai quebrar a casa é? \n");
+                    TimeUnit.SECONDS.sleep(2);
+                    System.out.println("Jade: Fica na sua, e não se mete !!!\n");
+                    TimeUnit.SECONDS.sleep(2);
+                    System.out.println("Tyler: Eu sou mais velho que você! Então me respeita!!!\n");
+                    System.out.println("Jade: Uau que idoso... Você é de 1999 e eu de 2000. Se liga!\n\n");
+                    System.out.println ("Tyler observa o quarto todos bagunçado, e vê no chão o celular de jade meio escondido no meio de alguns papeis, \n " +
+                            "então sem jade perceber ele pega o celular dela e vê que tem várias \n " +
+                            "chamadas e mensagens de Kevin e acha estranho.\n\n" +
+                            "Tyler movido pela sua curiosidade pega o celular de sua irmã");
+                    System.out.println("----------------------------------------------------------------");
+                    System.out.printf("%46s", "DESAFIO SENHA DO CELULAR!!!\n");
+                    System.out.println("----------------------------------------------------------------");
+                    System.out.println("Para acessar voce terá que descobrir a senha,\n" +
+                            "composta por algarismos romanos\n" +
+                            "e na seguinte senquencia\n" +
+                            "  Maria\n" +
+                            "  jaDe\n" +
+                            "  tayLer\n" +
+                            "  keVIn");
+                    System.out.println("----------------------------------------------------------------");
                     while (!condicaoResposta){
-                        System.out.println("Qual é senha para acessar o celular da Jade:");
-                        int resposta=sc.nextInt();
-                        if (resposta==1556){
-                            System.out.println("celular desbloqueado\n");
-                            condicaoResposta=true;
-                            acertos=acertos+1;
-                        }else {
-                            System.out.println("Senha incorreta\n");
-                            if (tentativas==2){
-                                System.out.println("dica");
+                        try {
+                            System.out.println("Qual é senha para acessar o celular da Jade:");
+                            int resposta = input.nextInt();
+                            if (resposta == 1556) {
+                                System.out.println("celular desbloqueado\n");
+                                condicaoResposta = true;
+                                acertos = acertos + 1;
+                            } else {
+                                System.out.println("Senha incorreta\n");
+                                if (tentativas == 2) {
+                                    System.out.println("*DICA: observe os padroes das palavras*");
+                                }if(tentativas==3){
+                                    System.out.println("*DICA: aquelas em maisucula*");
+                                }
+
+                                tentativas += tentativas;
+                                erroJogadas += erroJogadas;
                             }
-                            tentativas+=tentativas;
-                            erroJogadas+=erroJogadas;
+                        } catch (InputMismatchException exception) {
+                            System.out.println("Caracteres não permitidos, insira apenas números");
+                            input.nextLine();
                         }
                     }
                     System.out.println("Tyler vê no celular que pela foto de perfil que não é Kevin mandando as mensagens,\n" +
-                            " mas alguém com que Jade já tinha se envolvido no passado e que contribuiu para que ela se envolvesse com coisas erradas");
+                            "mas alguém com que Jade já tinha se envolvido no passado e que contribuiu para que ela se envolvesse com coisas erradas\n\n");
                     TimeUnit.SECONDS.sleep(3);
-                    System.out.println("TYLER: Você voltou a se envolver com esse cara ? Você enlouqueceu!!?");
-                    TimeUnit.SECONDS.sleep(4);
-                    System.out.println("JADE : Não é da sua conta o que eu faço da minha vida! ");
-                    TimeUnit.SECONDS.sleep(2);
-                    System.out.println(" TYLER: É quando causa problemas para dentro de casa, igual da última vez ");
-                    TimeUnit.SECONDS.sleep(2);
-                    System.out.println("....");
-                    System.out.println ("Enquanto Tyler e Jade discutem, Kevin que estava tentando jogar videogame vê que está demorando demais para o jogo iniciar e decide ir atras de Tyler \n " +
+                    System.out.println("Tyler: Você voltou a se envolver com esse cara ? Você enlouqueceu!!?\n\n");
+                    TimeUnit.SECONDS.sleep(3);
+                    System.out.println("Jade: Não é da sua conta o que eu faço da minha vida!\n\n");
+                    TimeUnit.SECONDS.sleep(3);
+                    System.out.println("Tyler: É quando causa problemas para dentro de casa, igual da última vez...\n\n");
+                    TimeUnit.SECONDS.sleep(3);
+                    System.out.println ("Enquanto Tyler e Jade discutem, Kevin  depois de ter voltado do banheiro e ido pro quarto, estava tentando jogar videogame vê que está demorando demais para o jogo iniciar e decide ir atras de Tyler \n " +
                             "para avisar que o jogo pode estar com problemas e nisso ele acaba ouvindo a discussão de Tyler e Jade  ");
-                    */
+                    System.out.println("Tyler: Por que você voltou a se envolver com ele?\n\n");
+                    TimeUnit.SECONDS.sleep(2);
+                    System.out.println("Jade: Lembra quando a vó estava doente e precisa de remédios?\n\n");
+                    TimeUnit.SECONDS.sleep(2);
+                    System.out.println("Tyler: Não me diga que o dinheiro para os remédios que você disse que tinha guardado você pegou com ele?\n");
+                    TimeUnit.SECONDS.sleep(2);
+                    System.out.println("Jade: Sim e agora estou devendo e com juros, e ele está me ameaçando...\n\n");
+                    TimeUnit.SECONDS.sleep(2);
+                    System.out.println("Ouvindo toda a conversa Kevin decide se envolver para ver se pode ajudar ambos.\n\n" +
+                            "Para que Kevin entre no quarto resolva o desafio.\n");
+                    TimeUnit.SECONDS.sleep(2);
+                    System.out.println("-------------------------------------------------------------------");
+                    System.out.printf("%36s","DESAFIO ACESSE O QUARTO!!!\n");
+                    System.out.println("-------------------------------------------------------------------");
+                    System.out.println("sabendo que a senha foi mostrada em alguma parte da historia.");
+                    System.out.println("-------------------------------------------------------------------");
+                    while (condicaoResposta) {
+                        try {
+                            System.out.println("Qual é senha para entar no quarto:");
+                            int resposta = input.nextInt();
+                            if (resposta == 2000) {
+                                System.out.println("acesso liberado\n");
+                                System.out.println("aperte enter para entrar no qaurto!...");
+                                String String = input.nextLine();
+                                condicaoResposta = false;
+                                acertos = acertos + 1;
+                            } else {
+                                System.out.println("Senha incorreta\n");
+                                if (tentativas == 2) {
+                                    System.out.println("Lembre-se do nascimento");
+                                }
+                                tentativas += tentativas;
+                                erroJogadas += erroJogadas;
+                            }
+                        } catch (InputMismatchException exception) {
+                            System.out.println("\nCaracteres não permitidos, insira apenas números.\n");
+                            input.nextLine();
+                        }
+
+                    }
+                    TimeUnit.SECONDS.sleep(2);
+                    System.out.println("Kevin: Gente é impossível não ouvir a briga de vocês... me deixa ajudar, eu tenho dinheiro.");
+                    System.out.println("Jade pensou rapidamente em usar Kevin tanto para dar o valor da dívida quanto para ir levar o dinheiro, assim ela sairia ilesa da situação. \n" +
+                            "\n" +
+                            "Kevin por estar apaixonado por Jade, aceita a proposta de ajuda e ouve ela explicar onde seria o local que o agita estaria. \n");
+                    System.out.println("-------------------------------------------------------------------");
+                    System.out.printf("%36s", "DESAFIO  LIBERE AS CORDENADAS !!!\n");
+                    System.out.println("-------------------------------------------------------------------");
+                    System.out.println("Para receber a coordenada lembre-se da palavra usada no enigma:"); // mudar esse enigma pois não é apresentado na histaria corrente
+                    System.out.println("-------------------------------------------------------------------");
+                    while (!condicaoResposta) {
+                        try {
+                            System.out.println("Qual é senha para entar no quarto:");
+                            int resposta = input.nextInt();
+                            if (resposta == 2000) { // resposta sera alterada
+                                System.out.println("Coordenadas liberadas = 50°48’49.00″N, 2°28’28.99″W\n");
+                                condicaoResposta = true;
+                                acertos = acertos + 1;
+                            } else {
+                                System.out.println("Senha incorreta\n");
+                                if (tentativas == 2) {
+                                    System.out.println("Lembre-se do nascimento");
+                                }
+                                tentativas += tentativas;
+                                erroJogadas += erroJogadas;
+                            }
+                        } catch (InputMismatchException exception) {
+                            System.out.println("\nCaracteres não permitidos, insira apenas números.\n");
+                            input.nextLine();
+                        }
+
+                    }
+                    System.out.println("Jade passa as coordenadas do local do agiota para Kevin, ele dirige,\n" +
+                            "saca o dinheiro ao chegar lá ele vi em direção a entrada pergunta pro segurança sobre uma ser certa pessoa e diz que veio em nome da Jade,\n" +
+                            "o segurança ao ouvir o nome de Jade libera e diz o caminho para Kevin. \n");
+                    TimeUnit.SECONDS.sleep(2);
+                    System.out.println("Segurança: É só seguir o corredor, no fim a direita tem uma porta. \n");
+                    TimeUnit.SECONDS.sleep(2);
+                    System.out.println("Kevin segue o corredor e vai até a porta que possui criptografia.\n");
+                    System.out.println("-------------------------------------------------------------------");
+                    System.out.printf("%36s", "DESAFIO  DESCRIPTOGRAFAR A SENHA!!!\n");
+                    System.out.println("-------------------------------------------------------------------");
+                    System.out.println("Dada a senha em criptografada em base64: Ym9hdGUtbWFycm9t ");
+                    System.out.println("-------------------------------------------------------------------");
+                    while (condicaoResposta) {
+                        try {
+                            System.out.println("Qual é senha para entar no quarto:");
+                            String resposta = input.next();
+                            if (resposta.equals("boate-marrom")) {
+                                System.out.println("acesso liberado\n");
+                                System.out.println("aperte enter para entrar...");
+                                String string = input.nextLine();
+                                condicaoResposta = false;
+                                acertos = acertos + 1;
+                            } else {
+                                System.out.println("Senha incorreta, tente novamente\n");
+                                if (tentativas == 2) {
+                                    System.out.println("Lembre-se do nascimento");
+                                }
+                                tentativas += tentativas;
+                                erroJogadas += erroJogadas;
+                            }
+                        } catch (InputMismatchException exception) {
+                            System.out.println("\nCaracteres não permitidos, insira apenas números.\n");
+                            input.nextLine();
+                        }
+                    }
+                    System.out.println("Kevin entra no quarto diz que veio em nome da Jade e está com o dinheiro,\n" +
+                            "o agiota aceita o dinheiro dá um sinal para os dois seguranças pegam Kevin\n" +
+                            "e o arrastam para trás e começa a espancar ele.\n");
+                    TimeUnit.SECONDS.sleep(2);
+                    System.out.println("Agiota: Isso é para que Jade aprenda que não pode ficar me enrolando sem ter consequências\n");
+                    TimeUnit.SECONDS.sleep(3);
+                    System.out.println("Após espancarem Kevin, os seguranças o levam pra fora e o jogam em um monte de lixo que fica perto da entrada,\n" +
+                            "enquanto isso Jade e Tyler vão até ele e ficam com medo do mesmo estar morto.\n");
+                    TimeUnit.SECONDS.sleep(2);
+                    System.out.println("Tyler: Kevin, fala comigo, Kevin! \n");
+                    TimeUnit.SECONDS.sleep(2);
+                    System.out.println("Jade: eu acho que ele morreu... \n");
+                    TimeUnit.SECONDS.sleep(2);
+                    System.out.println("Tyler: Nãooooo!!! e agora!?? \n");
+                    TimeUnit.SECONDS.sleep(2);
+                    System.out.println("Jade: Eu sinto muito, mas não tem o que fazer, vamos sair daqui antes que alguém nos veja aqui com ele! \n\n");
+                    TimeUnit.SECONDS.sleep(2);
+                    System.out.println("Tyler chorando, fica indeciso se abandona o amigo ou não, enquanto jade o chama para ir logo embora...\n\n");
+                    System.out.println("Então, mesmo com medo, Tyler decide ir com Jade e os dois fogem o mais rápido o possível, abandonado Kevin no local.\n\n");
+                    //( deixar o final um pouco mais emocinante)
+
                     break;
 
                 case 2:System.out.println("\n  <<Aqui vai algumas informações básicas sobre o jogo.>>\n"
