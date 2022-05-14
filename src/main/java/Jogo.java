@@ -82,6 +82,56 @@ public class Jogo {
                     switch (comparar) {
                         case 1:
                             System.out.println("____História 1____");
+                            System.out.println("\n\nKevin depois de perder, sai do quarto e no corredor se encontra com Jade que o chama e pede" +
+                                    "\num favor, Jade pede para que ele vá até o seu quarto para pegar uma caixa em cima do guarda-roupas, " +
+                                    "\nporque ela não alcança.\n" +
+                                    "Ao pegar a caixa, Kevin percebe que caiu algumas folhas e no meio delas, ele percebe uma anotação com instruções em enigma. \n");
+
+                            System.out.println("ENIGMA: “É preto quando você o compra, vermelho quando você o usa e cinza quando você o joga fora.”");
+                            System.out.println("\nEle pega a caixa e entrega para Jade perguntando:\n" +
+                                    "Kevin: Você parece meio tensa, aconteceu algo?\n" +
+                                    "\n“Jade nota que Kevin pode ser útil já que a mesma não sabe dirigir”\n" +
+                                    "\nJade: Sim, tenho um compromisso e você vai dirigir para mim, mas sem perguntas!\n" +
+                                    "Kevin: Ok \n" +
+                                    "\nDurante o caminho, Kevin não resiste e acaba perguntando para Jade o que está acontecendo.\n" +
+                                    "Jade: A verdade é que eu estou devendo para um agiota, mas ninguém pode saber disso, então não se mete!” \n" +
+                                    " “Kevin fica em silêncio”\n" +
+                                    "\nAo chegar lá, enquanto Kevin espera por ela, percebe que antes de entrar Jade diz algo para o segurança que está guardando a porta e entra.\n" +
+                                    "\nApós algum tempo ele decide ir atras dela, mesmo com medo, vai até o segurança, ao chegar lá o segurança encara Kevin e pergunta o que ele quer, Kevin pede para entrar e o segurança solicita a senha de entrada.\n");
+
+                            String senha = "";
+                            while(!senha.equalsIgnoreCase("carvão") && !senha.equalsIgnoreCase("carvao")){
+                                System.out.println("\nDigite a senha: ");
+                                String senhaDoUsuario = sc.next();
+                                senha = senhaDoUsuario;
+                            }
+                            System.out.println("Kevin entra e procura por Jade, vê ela conversando com um homem suspeito e com uma expressão de medo. \n" +
+                                    "Com isso ele deduz que aquele seja a pessoa para a qual ela está devendo.\n" +
+                                    " Kevin quer chegar em Jade de alguma forma, e decide procurar uma forma de chamar a atenção.\n");
+
+                            int escolhaNaBoate = 0;
+                            while (escolhaNaBoate == 0) {
+                                System.out.println("\nDigite o número do que Kevin deve fazer: ");
+                                System.out.println("\n1 - Tentar avançar para enfrentar o Agiota." +
+                                        "\n2 - Chegar de forma discreta para negociar com o agiota e pagar a dívida de Jade.");
+                                escolhaNaBoate = sc.nextInt();
+
+                                if (escolhaNaBoate == 1) {
+                                    escolhaNaBoate =1;
+                                    System.out.println("\nKevin tenta avançar para enfrentar o Agiota, e acaba sendo baleado." +
+                                            "\n\nFIM DO JOGO.");
+                                } else if (escolhaNaBoate == 2) {
+                                    escolhaNaBoate =2;
+                                    System.out.println("\nO Agiota, após receber a transferência, decide liberar os dois, eles saem e vão para o carro em silêncio, " +
+                                            "\nquando chegam no carro, Jade pergunta o porquê de ele ter feito isso e Kevin diz\n" +
+                                            "Kevin: Eu vi que você precisava de ajuda, e eu não consigo ver alguém que eu gosto nesse tipo de situação\n" +
+                                            "\t\t“Jade se emociona e beija Kevin”\n");
+                                    System.out.println("FIM DE JOGO.");
+                                } else {
+                                    escolhaNaBoate = 0;
+                                }
+                            }
+
 
                             break;
 
@@ -97,7 +147,7 @@ public class Jogo {
                             do {
                                 System.out.println("\nDe quem é a famosa frase “Penso, logo existo”?");
                                 pergunta1 = sc.next();
-                                if (pergunta1.equals("Descartes")) {
+                                if (pergunta1.equalsIgnoreCase("Descartes")) {
                                     System.out.println("Certa resposta");
                                     break;
                                 } else {
@@ -111,7 +161,7 @@ public class Jogo {
                                         "\nB) Infinitas" +
                                         "\nC) 7");
                                 pergunta2 = sc.next();
-                                if (pergunta2.equals("B")) {
+                                if (pergunta2.equalsIgnoreCase("B")) {
                                     System.out.println("Certa Resposta");
                                     break;
                                 } else {
