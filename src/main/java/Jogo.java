@@ -194,8 +194,89 @@ public class Jogo {
 
                             }while(kevin == entrar);
                             if (entrar == 1) {
-                                System.out.println("\nKevin entra e vê Jade tirando a caixa de cima dela e ao tentar ajudar a pegar os papéis que caíram, Jade diz:" +
-                                        "\n“Não preciso de ajuda, não toca nesses papéis!”, pega os papéis, guarda de volta na caixa e sai, dizendo “Espere aqui, não se mexe.” ");
+                                System.out.println("Kevin entra e vê Jade tirando a caixa de cima dela e ao tentar ajudar a pegar ");
+                                System.out.println("os papéis que caíram, Jade diz: “Não preciso de ajuda, não toca nesses papéis!”");
+                                System.out.println("pega os papéis, guarda de volta na caixa e sai, dizendo “Espere aqui, não se mexe!”");
+
+                                System.out.println("\nKevin estranha o surto que ela teve e na mesma hora o notebook dela faz um barulho de notificação bem alto.");
+                                System.out.println("Curioso, Kevin tenta desbloquear o notebook para ler a mensagem. ");
+
+                                System.out.println("Para acessar o notebook... Converta 1001000101000111011010000 binário para decimal.");
+
+                                int senhaDoNotebook = 0;
+                                while(senhaDoNotebook != 19042000){
+                                    System.out.println("Digite o resultado: ");
+                                    int senhaUsuario = sc.nextInt();
+                                    senhaDoNotebook = senhaUsuario;
+                                }
+
+
+                                System.out.println("Kevin fica confuso com a mensagem, mas fecha tudo rapidamente para Jade não notar que ele viu. ");
+                                System.out.println("Jade volta para o quarto e vai ler a mensagem que tinha chegado, mas percebe já estava marcada como “lida”. ");
+                                System.out.println("Jade se enfurece, mas usa isso ao seu favor, já que ela não sabe dirigir, e diz para Kevin:");
+                                System.out.println("\nJade: Vamos, agora que sei que você leu a mensagem que chegou para mim," +
+                                        "\nvocê vai ter que me ajudar, me leva nesse endereço!”");
+                                System.out.println("Kevin aceita por estar apaixonado por Jade. No carro ele precisa colocar da localização, mas o GPS só aceita CEP.\n");
+
+                                String cep = "";
+                                while (!cep.equals("01545-001") && !cep.equals("01545001")) {
+                                    System.out.println("Digite o CEP do endereço visto na mensagem anteriormente: ");
+                                    String cepEndereco = sc.next();
+                                    cep = cepEndereco;
+                                }
+
+                                System.out.println("Durante o caminho, Kevin não resiste e acaba perguntando para Jade o que está acontecendo”.");
+                                System.out.println("Jade: A verdade é que eu estou devendo para um agiota, mas ninguém pode saber disso, então não se mete!”.");
+                                System.out.println("Kevin: Desculpa...");
+                                System.out.println("Ao chegar lá, ela sai do carro, e se encaminha até uma porta vermelha em um beco, ");
+                                System.out.println("após algum tempo ele decide ir atras dela, mesmo com medo, ele desce do carro, e se encaminha até o segurança,");
+                                System.out.println("ao chegar lá o segurança encara Kevin e pergunta o que ele quer, Kevin pede para entrar e o segurança solicita a senha de entrada.");
+                                System.out.println("\nKevin: Eu não sei, Jade é minha..., irmã e eu vim atrás dela.");
+                                System.out.println("Segurança: Então me fala a data de nascimento dela.\n");
+
+                                int opcaoDesafioNascimento = 0;
+                                while (opcaoDesafioNascimento != 2){
+                                    System.out.println("Qual das opções abaixo é o aniversário da Jade?");
+                                    System.out.println("1) 19/03/2000");
+                                    System.out.println("2) 19/04/2000");
+                                    System.out.println("3) 19/03/2001");
+                                    int opcaoEscolhida = sc.nextInt();
+                                    opcaoDesafioNascimento = opcaoEscolhida;
+                                }
+
+
+                                System.out.println("Kevin entra com a data de nascimento correta, ao entrar ele procura por Jade,");
+                                System.out.println("e vê ela conversando com um homem suspeito em uma área privada na parte de cima da boate,");
+                                System.out.println("lá ele a vê com uma expressão de medo e com isso ele deduz que aquele seja a pessoa para");
+                                System.out.println("a qual ela está devendo, Kevin quer chegar em Jade de alguma forma, e decide procurar uma forma de chamar a atenção.");
+
+                                int decisaoParaAgir = 0;
+                                while (decisaoParaAgir == 0) {
+                                    System.out.println("O que Kevin deve fazer? ");
+                                    System.out.println("1) Tentar avançar para enfrentar o Agiota.\n" +
+                                            "2) Chegar de forma discreta para negociar com o agiota e pagar a dívida de Jade.\n");
+                                    int decisaoDigitada = sc.nextInt();
+
+                                    if (decisaoDigitada == 1) {
+                                        decisaoParaAgir = 1;
+                                        System.out.println("Kevin tenta avançar no agiota mas o mesmo rapidamente se defende, atirando em Kevin.");
+                                        System.out.println("POW! ");
+                                        System.out.println("\n\nFIM DE JOGO!\n");
+
+                                    } else if (decisaoDigitada == 2) {
+                                        decisaoParaAgir =2;
+                                        System.out.println("O Agiota, após receber a transferência, decide liberar os dois, eles saem e vão para o carro em silencio, quando chegam no carro, Jade pergunta o porquê de ele ter feito isso e Kevin diz:");
+                                        System.out.println("Kevin: Eu vi que você precisava de ajuda, e eu não consigo ver alguém que eu gosto nesse tipo de situação.");
+                                        System.out.println("Jade: Você é uma pessoa muito especial e eu agradeço o que você fez, mas infelizmente você sabe demais.");
+                                        System.out.println("\nPOW! POW! ");
+                                        System.out.println("\n\nFIM DE JOGO!\n");
+
+                                    } else {
+                                        decisaoParaAgir = 0;
+                                        System.out.println("Digite uma opção válida.");
+
+                                    }
+                                }
                                 break;
                             } else {
                                 System.out.println("\nKevin ouve Tyler saindo do quarto e assustado, se esconde.");
