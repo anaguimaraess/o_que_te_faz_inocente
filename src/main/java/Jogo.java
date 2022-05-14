@@ -21,6 +21,138 @@ public class Jogo {
             switch (iniciar) {
                 case 1:
                     System.out.println("Começo da História");
+                    Scanner sc = new Scanner(System.in);
+
+                    int kevin, tyler, comparar = 0;
+
+                    System.out.println("\nDurante uma tarde de verão, enquanto Kevin jogava Perguntados online com seu amigo Tyler," +
+                            "\nsua mãe pede para que ele pause o jogo online para que ela possa limpar a mesa, ele acaba se irritando" +
+                            "\ncom isso e seu amigo Tyler ouve e o convida para ir até sua casa, ele aceita e vai," +
+                            "\nao chegar lá, Kevin diz: ");
+                    System.out.println("\nKevin: A sua irmã está por aí?");
+                    System.out.println("Tyler: Você não veio aqui para jogar? O que você quer com ela?");
+                    System.out.println("Kevin: Calma cara, é só um pergunta!");
+                    System.out.println("Tyler: Então vamos lá para cima jogar, só que só tem um controle, vamos ter que jogar Perguntados. \n"
+                            + "Ai a gente decide quem joga primeiro no Jokenpô. \n");
+
+                    System.out.println("____JOKENPÔ____\n");
+                    System.out.println("1 - Pedra");
+                    System.out.println("2 - Papel");
+                    System.out.println("3 - Tesoura");
+                    do {
+                        System.out.println("Kevin digite a sua opção: ");
+                        kevin = sc.nextInt();
+
+                        tyler = (int) (Math.random() * 3 + 1);
+                        System.out.println("\n");
+                        switch (tyler) {
+                            case 1:
+                                System.out.println("Tyler escolheu Pedra");
+                                break;
+                            case 2:
+                                System.out.println("Tyler escolheu Papel");
+                                break;
+                            case 3:
+                                System.out.println("Tyler escolheu Tesoura");
+                                break;
+                        }
+                        switch (kevin) {
+                            case 1:
+                                System.out.println("Kevin escolheu Pedra");
+                                break;
+                            case 2:
+                                System.out.println("Kevin escolheu Papel");
+                                break;
+                            case 3:
+                                System.out.println("Kevin escolheu Tesoura");
+                                break;
+                        }
+                        if (kevin == tyler) {
+                            System.out.println("Empate! Ninguém ganhou.");
+                        }
+                    } while (kevin == tyler);
+                    if ((kevin == 1 && tyler == 3) || (kevin == 2 && tyler == 1) || (kevin == 3 && tyler == 2)) {
+                        System.out.println("Kevin ganhou!");
+                        comparar = 2;
+                    } else {
+                        comparar = 1;
+                        System.out.println("Tyler ganhou!");
+                    }
+
+                    switch (comparar) {
+                        case 1:
+                            System.out.println("____História 1____");
+
+                            break;
+
+                        case 2:
+                            System.out.println("\n____Historia 2____");
+                            System.out.println("\nKevin ganhou então ele começa a jogar, e distraído, começa a pensar na Jade");
+                            System.out.println("\nPensamento do Kevin: “Acho que a Jade está no quarto...Estou sentindo o cheiro do perfume" +
+                                    "\ndela daqui! Que por sinal é muito bom, acho que vou arrumar uma desculpa para ir até lá”.");
+                            System.out.println("\nKevin precisa finalizar o jogo para poder ir procurar a Jade.");
+                            System.out.println("\nResponda as próximas perguntas do jogo para poder finalizar.");
+
+                            String pergunta1;
+                            do {
+                                System.out.println("\nDe quem é a famosa frase “Penso, logo existo”?");
+                                pergunta1 = sc.next();
+                                if (pergunta1.equals("Descartes")) {
+                                    System.out.println("Certa resposta");
+                                    break;
+                                } else {
+                                    System.out.println("Você errou");
+                                }
+                            } while (pergunta1.equals(pergunta1));
+                            String pergunta2;
+                            do {
+                                System.out.println("Quantas casas decimais tem o número pi?" +
+                                        "\nA) 50" +
+                                        "\nB) Infinitas" +
+                                        "\nC) 7");
+                                pergunta2 = sc.next();
+                                if (pergunta2.equals("B")) {
+                                    System.out.println("Certa Resposta");
+                                    break;
+                                } else {
+                                    System.out.println("Você errou");
+                                }
+                            }while(pergunta2.equals(pergunta2));
+
+                            int pergunta3 ;
+                            do {
+                                System.out.println("Qual a montanha mais alta do Brasil?" +
+                                        "\n1) Pico da neblina" +
+                                        "\n2) Pico da bandeira" +
+                                        "\n3) Pedra da mina");
+                                pergunta3 = sc.nextInt();
+                                if (pergunta3==1) {
+                                    System.out.println("Parabéns você acertou todas");
+                                } else {
+                                    System.out.println("Você errou, tente novamente");
+                                }
+                            }while(pergunta3!=1);
+                            System.out.println("\nPensamento do Kevin: “Ufa, consegui terminar o jogo, agora vou falar que vou ao banheiro”.");
+                            System.out.println("\nKevin fala que vai ir ao banheiro e diz para Tyler ir jogando. Mas na verdade Kevin vai procurar Jade e para sua sorte," +
+                                    "\nouve um barulho de caixa caindo e a voz dela dizendo “aaaii, essa merda de caixa pesada!”. E então ele segue o som e vai ao quarto dela.");
+                            int entrar = 0;
+                            do {
+                                System.out.println("\nEscolha qual decisão você quer: " +
+                                        "\n1 - Entrar no quarto" +
+                                        "\n2 - Esperar na porta");
+                                entrar = sc.nextInt();
+
+                            }while(kevin == entrar);
+                            if (entrar == 1) {
+                                System.out.println("\nKevin entra e vê Jade tirando a caixa de cima dela e ao tentar ajudar a pegar os papéis que caíram, Jade diz:" +
+                                        "\n“Não preciso de ajuda, não toca nesses papéis!”, pega os papéis, guarda de volta na caixa e sai, dizendo “Espere aqui, não se mexe.” ");
+                                break;
+                            } else {
+                                System.out.println("\nKevin ouve Tyler saindo do quarto e assustado, se esconde.");
+                            }
+                        default:
+                            break;
+                    }
 
                     /*
                      //Historia3, a ser ligada a decisão na Histora 2
