@@ -8,6 +8,7 @@ public class Jogo {
     public static void main(String[] args) throws InterruptedException{
         Scanner input = new Scanner(System.in);
         int iniciar;
+        int decisaoEntrar = 0;
         do {
             System.out.println("<----------------->\n"
                     + ">>Inicio de Jogo!<<\n"
@@ -192,7 +193,7 @@ public class Jogo {
                                         "\n2 - Esperar na porta");
                                 entrar = sc.nextInt();
 
-                            }while(kevin == entrar);
+                            }while(decisaoEntrar == entrar);
                             if (entrar == 1) {
                                 System.out.println("Kevin entra e vê Jade tirando a caixa de cima dela e ao tentar ajudar a pegar ");
                                 System.out.println("os papéis que caíram, Jade diz: “Não preciso de ajuda, não toca nesses papéis!”");
