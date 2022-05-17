@@ -7,145 +7,146 @@ public class Jogo {
     //Menu do jogo com 5 opções para o jogador.//
     public static void main(String[] args) throws InterruptedException{
         Scanner sc = new Scanner(System.in);
-        int iniciar;
+        int iniciar = 0;
         int decisaoEntrar = 0;
         int pontos = 2;
         do {
-            System.out.println("<----------------->\n"
-                    + ">>Inicio de Jogo!<<\n"
-                    + "<<==============>>");
-            System.out.println(" >>Menu do jogo<< \n<<==============>>"
-                    + "\n\n <<= 1-Iniciar | 2-Informações | 3-Personagens | 4-Créditos | 5-Fechar jogo =>>");
-            iniciar = sc.nextInt();
+            try {
 
-//Usei o switch case para criar um menu de opções onde o jogador pode decidir se ele prefere ir direto ao jogo, informações sobre personagens e etc.//
+                System.out.println("<----------------->\n"
+                        + ">>Inicio de Jogo!<<\n"
+                        + "<<==============>>");
+                System.out.println(" >>Menu do jogo<< \n<<==============>>"
+                        + "\n\n <<= 1-Iniciar | 2-Informações | 3-Personagens | 4-Créditos | 5-Fechar jogo =>>");
+                iniciar = sc.nextInt();
 
-            switch (iniciar) {
-                case 1:
-                    System.out.println("Começo da História");
-                    int kevin, tyler, comparar = 0;
-                    System.out.println("\nDurante uma tarde de verão, enquanto Kevin jogava Perguntados online com seu amigo Tyler," +
-                            "\nsua mãe pede para que ele pause o jogo online para que ela possa limpar a mesa, ele acaba se irritando" +
-                            "\ncom isso e seu amigo Tyler ouve e o convida para ir até sua casa, ele aceita e vai," +
-                            "\nao chegar lá, Kevin diz: ");
-                    System.out.println("\nKevin: A sua irmã está por aí?");
-                    System.out.println("Tyler: Você não veio aqui para jogar? O que você quer com ela?");
-                    System.out.println("Kevin: Calma cara, é só um pergunta!");
-                    System.out.println("Tyler: Então vamos lá para cima jogar, só que só tem um controle, vamos ter que jogar Perguntados. \n"
-                            + "Ai a gente decide quem joga primeiro no Jokenpô. \n");
+                //Usei o switch case para criar um menu de opções onde o jogador pode decidir se ele prefere ir direto ao jogo, informações sobre personagens e etc.//
+                switch (iniciar) {
+                    case 1:
+                        System.out.println("Começo da História");
+                        int kevin, tyler, comparar = 0;
+                        System.out.println("\nDurante uma tarde de verão, enquanto Kevin jogava Perguntados online com seu amigo Tyler," +
+                                "\nsua mãe pede para que ele pause o jogo online para que ela possa limpar a mesa, ele acaba se irritando" +
+                                "\ncom isso e seu amigo Tyler ouve e o convida para ir até sua casa, ele aceita e vai," +
+                                "\nao chegar lá, Kevin diz: ");
+                        System.out.println("\nKevin: A sua irmã está por aí?");
+                        System.out.println("Tyler: Você não veio aqui para jogar? O que você quer com ela?");
+                        System.out.println("Kevin: Calma cara, é só um pergunta!");
+                        System.out.println("Tyler: Então vamos lá para cima jogar, só que só tem um controle, vamos ter que jogar Perguntados. \n"
+                                + "Ai a gente decide quem joga primeiro no Jokenpô. \n");
 
-                    System.out.println("____JOKENPÔ____\n");
-                    System.out.println("1 - Pedra");
-                    System.out.println("2 - Papel");
-                    System.out.println("3 - Tesoura");
-                    do {
-                        System.out.println("Kevin digite a sua opção: ");
-                        kevin = sc.nextInt();
+                        System.out.println("____JOKENPÔ____\n");
+                        System.out.println("1 - Pedra");
+                        System.out.println("2 - Papel");
+                        System.out.println("3 - Tesoura");
+                        do {
+                            System.out.println("Kevin digite a sua opção: ");
+                            kevin = sc.nextInt();
 
-                        tyler = (int) (Math.random() * 3 + 1);
-                        System.out.println("\n");
-                        switch (tyler) {
+                            tyler = (int) (Math.random() * 3 + 1);
+                            System.out.println("\n");
+                            switch (tyler) {
+                                case 1:
+                                    System.out.println("Tyler escolheu Pedra");
+                                    break;
+                                case 2:
+                                    System.out.println("Tyler escolheu Papel");
+                                    break;
+                                case 3:
+                                    System.out.println("Tyler escolheu Tesoura");
+                                    break;
+                            }
+                            switch (kevin) {
+                                case 1:
+                                    System.out.println("Kevin escolheu Pedra");
+                                    break;
+                                case 2:
+                                    System.out.println("Kevin escolheu Papel");
+                                    break;
+                                case 3:
+                                    System.out.println("Kevin escolheu Tesoura");
+                                    break;
+                            }
+                            if (kevin == tyler) {
+                                System.out.println("Empate! Ninguém ganhou.");
+                            }
+                        } while (kevin == tyler);
+                        if ((kevin == 1 && tyler == 3) || (kevin == 2 && tyler == 1) || (kevin == 3 && tyler == 2)) {
+                            System.out.println("Kevin ganhou!");
+                            comparar = 2;
+                        } else {
+                            comparar = 1;
+                            System.out.println("Tyler ganhou!");
+                        }
+
+                        switch (comparar) {
                             case 1:
-                                System.out.println("Tyler escolheu Pedra");
-                                break;
-                            case 2:
-                                System.out.println("Tyler escolheu Papel");
-                                break;
-                            case 3:
-                                System.out.println("Tyler escolheu Tesoura");
-                                break;
-                        }
-                        switch (kevin) {
-                            case 1:
-                                System.out.println("Kevin escolheu Pedra");
-                                break;
-                            case 2:
-                                System.out.println("Kevin escolheu Papel");
-                                break;
-                            case 3:
-                                System.out.println("Kevin escolheu Tesoura");
-                                break;
-                        }
-                        if (kevin == tyler) {
-                            System.out.println("Empate! Ninguém ganhou.");
-                        }
-                    } while (kevin == tyler);
-                    if ((kevin == 1 && tyler == 3) || (kevin == 2 && tyler == 1) || (kevin == 3 && tyler == 2)) {
-                        System.out.println("Kevin ganhou!");
-                        comparar = 2;
-                    } else {
-                        comparar = 1;
-                        System.out.println("Tyler ganhou!");
-                    }
+                                System.out.println("____História 1____");
+                                System.out.println("\n\nKevin depois de perder, sai do quarto e no corredor se encontra com Jade que o chama e pede" +
+                                        "\num favor, Jade pede para que ele vá até o seu quarto para pegar uma caixa em cima do guarda-roupas, " +
+                                        "\nporque ela não alcança.\n" +
+                                        "Ao pegar a caixa, Kevin percebe que caiu algumas folhas e no meio delas, ele percebe uma anotação com instruções em enigma. \n");
 
-                    switch (comparar) {
-                        case 1:
-                            System.out.println("____História 1____");
-                            System.out.println("\n\nKevin depois de perder, sai do quarto e no corredor se encontra com Jade que o chama e pede" +
-                                    "\num favor, Jade pede para que ele vá até o seu quarto para pegar uma caixa em cima do guarda-roupas, " +
-                                    "\nporque ela não alcança.\n" +
-                                    "Ao pegar a caixa, Kevin percebe que caiu algumas folhas e no meio delas, ele percebe uma anotação com instruções em enigma. \n");
+                                System.out.println("ENIGMA: “É preto quando você o compra, vermelho quando você o usa e cinza quando você o joga fora.”");
+                                System.out.println("\nEle pega a caixa e entrega para Jade perguntando:\n" +
+                                        "Kevin: Você parece meio tensa, aconteceu algo?\n" +
+                                        "\n“Jade nota que Kevin pode ser útil já que a mesma não sabe dirigir”\n" +
+                                        "\nJade: Sim, tenho um compromisso e você vai dirigir para mim, mas sem perguntas!\n" +
+                                        "Kevin: Ok \n" +
+                                        "\nDurante o caminho, Kevin não resiste e acaba perguntando para Jade o que está acontecendo.\n" +
+                                        "Jade: A verdade é que eu estou devendo para um agiota, mas ninguém pode saber disso, então não se mete!” \n" +
+                                        " “Kevin fica em silêncio”\n" +
+                                        "\nAo chegar lá, enquanto Kevin espera por ela, percebe que antes de entrar Jade diz algo para o segurança que está guardando a porta e entra.\n" +
+                                        "\nApós algum tempo ele decide ir atras dela, mesmo com medo, vai até o segurança, ao chegar lá o segurança encara Kevin e pergunta o que ele quer, Kevin pede para entrar e o segurança solicita a senha de entrada.\n");
 
-                            System.out.println("ENIGMA: “É preto quando você o compra, vermelho quando você o usa e cinza quando você o joga fora.”");
-                            System.out.println("\nEle pega a caixa e entrega para Jade perguntando:\n" +
-                                    "Kevin: Você parece meio tensa, aconteceu algo?\n" +
-                                    "\n“Jade nota que Kevin pode ser útil já que a mesma não sabe dirigir”\n" +
-                                    "\nJade: Sim, tenho um compromisso e você vai dirigir para mim, mas sem perguntas!\n" +
-                                    "Kevin: Ok \n" +
-                                    "\nDurante o caminho, Kevin não resiste e acaba perguntando para Jade o que está acontecendo.\n" +
-                                    "Jade: A verdade é que eu estou devendo para um agiota, mas ninguém pode saber disso, então não se mete!” \n" +
-                                    " “Kevin fica em silêncio”\n" +
-                                    "\nAo chegar lá, enquanto Kevin espera por ela, percebe que antes de entrar Jade diz algo para o segurança que está guardando a porta e entra.\n" +
-                                    "\nApós algum tempo ele decide ir atras dela, mesmo com medo, vai até o segurança, ao chegar lá o segurança encara Kevin e pergunta o que ele quer, Kevin pede para entrar e o segurança solicita a senha de entrada.\n");
-
-                            String senha = "";
-                            int valorde = 0;
-                            while(!senha.equalsIgnoreCase("carvão") && !senha.equalsIgnoreCase("carvao")){
-                                System.out.println("\nDigite a senha: ");
-                                String senhaDoUsuario = sc.next();
-                                senha = senhaDoUsuario;
-                                if (!senha.equalsIgnoreCase("carvão") && !senha.equalsIgnoreCase("carvao")  && pontos > 0 && valorde < 1){
-                                    System.out.println("Número de dicas atual:  " + pontos + "\nQuer usar dica? Digite 'sim' ou 'não'" );
-                                    String userYesOrNot = sc.next();
-                                    if (userYesOrNot.equalsIgnoreCase("sim")){
-                                        pontos -= 1;
-                                        System.out.println("Agora seu número atual de dicas é:  " + pontos);
-                                        System.out.println("Dica: Lembre-se do enigma que apareceu anteriormente, a resposta é apenas um substantivo.");
-                                        valorde +=1;
-                                    }else{
-                                        System.out.println("Ok...");
+                                String senha = "";
+                                int valorde = 0;
+                                while (!senha.equalsIgnoreCase("carvão") && !senha.equalsIgnoreCase("carvao")) {
+                                    System.out.println("\nDigite a senha: ");
+                                    String senhaDoUsuario = sc.next();
+                                    senha = senhaDoUsuario;
+                                    if (!senha.equalsIgnoreCase("carvão") && !senha.equalsIgnoreCase("carvao") && pontos > 0 && valorde < 1) {
+                                        System.out.println("Número de dicas atual:  " + pontos + "\nQuer usar dica? Digite 'sim' ou 'não'");
+                                        String userYesOrNot = sc.next();
+                                        if (userYesOrNot.equalsIgnoreCase("sim")) {
+                                            pontos -= 1;
+                                            System.out.println("Agora seu número atual de dicas é:  " + pontos);
+                                            System.out.println("Dica: Lembre-se do enigma que apareceu anteriormente, a resposta é apenas um substantivo.");
+                                            valorde += 1;
+                                        } else {
+                                            System.out.println("Ok...");
+                                        }
+                                    } else {
+                                        pontos += 1;
                                     }
-                                }else{
-                                    pontos += 1;
                                 }
-                            }
-                            System.out.println("Kevin entra e procura por Jade, vê ela conversando com um homem suspeito e com uma expressão de medo. \n" +
-                                    "Com isso ele deduz que aquele seja a pessoa para a qual ela está devendo.\n" +
-                                    " Kevin quer chegar em Jade de alguma forma, e decide procurar uma forma de chamar a atenção.\n");
+                                System.out.println("Kevin entra e procura por Jade, vê ela conversando com um homem suspeito e com uma expressão de medo. \n" +
+                                        "Com isso ele deduz que aquele seja a pessoa para a qual ela está devendo.\n" +
+                                        " Kevin quer chegar em Jade de alguma forma, e decide procurar uma forma de chamar a atenção.\n");
 
-                            int escolhaNaBoate = 0;
-                            while (escolhaNaBoate == 0) {
-                                System.out.println("\nDigite o número do que Kevin deve fazer: ");
-                                System.out.println("\n1 - Tentar avançar para enfrentar o Agiota." +
-                                        "\n2 - Chegar de forma discreta para negociar com o agiota e pagar a dívida de Jade.");
-                                escolhaNaBoate = sc.nextInt();
+                                int escolhaNaBoate = 0;
+                                while (escolhaNaBoate == 0) {
+                                    System.out.println("\nDigite o número do que Kevin deve fazer: ");
+                                    System.out.println("\n1 - Tentar avançar para enfrentar o Agiota." +
+                                            "\n2 - Chegar de forma discreta para negociar com o agiota e pagar a dívida de Jade.");
+                                    escolhaNaBoate = sc.nextInt();
 
-                                if (escolhaNaBoate == 1) {
-                                    escolhaNaBoate =1;
-                                    System.out.println("\nKevin tenta avançar para enfrentar o Agiota, e acaba sendo baleado." +
-                                            "\n\nFIM DO JOGO.");
-                                } else if (escolhaNaBoate == 2) {
-                                    escolhaNaBoate =2;
-                                    System.out.println("\nO Agiota, após receber a transferência, decide liberar os dois, eles saem e vão para o carro em silêncio, " +
-                                            "\nquando chegam no carro, Jade pergunta o porquê de ele ter feito isso e Kevin diz\n" +
-                                            "Kevin: Eu vi que você precisava de ajuda, e eu não consigo ver alguém que eu gosto nesse tipo de situação\n" +
-                                            "\t\t“Jade se emociona e beija Kevin”\n");
-                                    System.out.println("FIM DE JOGO.");
-                                } else {
-                                    escolhaNaBoate = 0;
+                                    if (escolhaNaBoate == 1) {
+                                        escolhaNaBoate = 1;
+                                        System.out.println("\nKevin tenta avançar para enfrentar o Agiota, e acaba sendo baleado." +
+                                                "\n\nFIM DO JOGO.");
+                                    } else if (escolhaNaBoate == 2) {
+                                        escolhaNaBoate = 2;
+                                        System.out.println("\nO Agiota, após receber a transferência, decide liberar os dois, eles saem e vão para o carro em silêncio, " +
+                                                "\nquando chegam no carro, Jade pergunta o porquê de ele ter feito isso e Kevin diz\n" +
+                                                "Kevin: Eu vi que você precisava de ajuda, e eu não consigo ver alguém que eu gosto nesse tipo de situação\n" +
+                                                "\t\t“Jade se emociona e beija Kevin”\n");
+                                        System.out.println("FIM DE JOGO.");
+                                    } else {
+                                        escolhaNaBoate = 0;
+                                    }
                                 }
-                            }
-                            break;
+                                break;
 
                             case 2:
                                 System.out.println("\n____Historia 2____");
@@ -179,21 +180,21 @@ public class Jogo {
                                     } else {
                                         System.out.println("Você errou");
                                     }
-                                }while(pergunta2.equals(pergunta2));
+                                } while (pergunta2.equals(pergunta2));
 
-                                int pergunta3 ;
+                                int pergunta3;
                                 do {
                                     System.out.println("Qual a montanha mais alta do Brasil?" +
                                             "\n1) Pico da neblina" +
                                             "\n2) Pico da bandeira" +
                                             "\n3) Pedra da mina");
                                     pergunta3 = sc.nextInt();
-                                    if (pergunta3==1) {
+                                    if (pergunta3 == 1) {
                                         System.out.println("Parabéns você acertou todas");
                                     } else {
                                         System.out.println("Você errou, tente novamente");
                                     }
-                                }while(pergunta3!=1);
+                                } while (pergunta3 != 1);
                                 System.out.println("\nPensamento do Kevin: “Ufa, consegui terminar o jogo, agora vou falar que vou ao banheiro”.");
                                 System.out.println("\nKevin fala que vai ir ao banheiro e diz para Tyler ir jogando. Mas na verdade Kevin vai procurar Jade e para sua sorte," +
                                         "\nouve um barulho de caixa caindo e a voz dela dizendo “aaaii, essa merda de caixa pesada!”. E então ele segue o som e vai ao quarto dela.");
@@ -204,7 +205,7 @@ public class Jogo {
                                             "\n2 - Esperar na porta");
                                     entrar = sc.nextInt();
 
-                                }while(decisaoEntrar == entrar);
+                                } while (decisaoEntrar == entrar);
                                 if (entrar == 1) {
                                     System.out.println("Kevin entra e vê Jade tirando a caixa de cima dela e ao tentar ajudar a pegar ");
                                     System.out.println("os papéis que caíram, Jade diz: “Não preciso de ajuda, não toca nesses papéis!”");
@@ -216,7 +217,7 @@ public class Jogo {
                                     System.out.println("Para acessar o notebook... Converta 1001000101000111011010000 binário para decimal.");
 
                                     int senhaDoNotebook = 0;
-                                    while(senhaDoNotebook != 19042000){
+                                    while (senhaDoNotebook != 19042000) {
                                         System.out.println("Digite o resultado: ");
                                         int senhaUsuario = sc.nextInt();
                                         senhaDoNotebook = senhaUsuario;
@@ -247,7 +248,7 @@ public class Jogo {
                                     System.out.println("Segurança: Então me fala a data de nascimento dela.\n");
 
                                     int opcaoDesafioNascimento = 0;
-                                    while (opcaoDesafioNascimento != 2){
+                                    while (opcaoDesafioNascimento != 2) {
                                         System.out.println("Qual das opções abaixo é o aniversário da Jade?");
                                         System.out.println("1) 19/03/2000");
                                         System.out.println("2) 19/04/2000");
@@ -276,7 +277,7 @@ public class Jogo {
                                             System.out.println("\n\nFIM DE JOGO!\n");
 
                                         } else if (decisaoDigitada == 2) {
-                                            decisaoParaAgir =2;
+                                            decisaoParaAgir = 2;
                                             System.out.println("O Agiota, após receber a transferência, decide liberar os dois, eles saem e vão para o carro em silencio, quando chegam no carro, Jade pergunta o porquê de ele ter feito isso e Kevin diz:");
                                             System.out.println("Kevin: Eu vi que você precisava de ajuda, e eu não consigo ver alguém que eu gosto nesse tipo de situação.");
                                             System.out.println("Jade: Você é uma pessoa muito especial e eu agradeço o que você fez, mas infelizmente você sabe demais.");
@@ -293,7 +294,8 @@ public class Jogo {
                                 } else {
                                     System.out.println("\nKevin ouve Tyler saindo do quarto e assustado, se esconde.");
                                     //Historia3, a ser ligada a decisão na Histora 2
-                                    boolean condicaoResposta = false; int tentativas = 0, erroJogadas=0,acertos=0;
+                                    boolean condicaoResposta = false;
+                                    int tentativas = 0, erroJogadas = 0, acertos = 0;
                                     System.out.println("Enquanto Kevin se prepara para jogar, Tyler que perdeu no “perguntados”, diz que vai para a cozinha, \n" +
                                             "nisso Kevin pega o controle e esperar subir vídeo para jogar. \n" +
                                             "Enquanto Tyler vai para a cozinha, no meio do caminho ele houve um barulho estranho" +
@@ -305,7 +307,7 @@ public class Jogo {
                                     TimeUnit.SECONDS.sleep(2);
                                     System.out.println("Tyler: Eu sou mais velho que você! Então me respeita!!!\n");
                                     System.out.println("Jade: Uau que idoso... Você é de 1999 e eu de 2000. Se liga!\n\n");
-                                    System.out.println ("Tyler observa o quarto todos bagunçado, e vê no chão o celular de jade meio escondido no meio de alguns papeis, \n " +
+                                    System.out.println("Tyler observa o quarto todos bagunçado, e vê no chão o celular de jade meio escondido no meio de alguns papeis, \n " +
                                             "então sem jade perceber ele pega o celular dela e vê que tem várias \n " +
                                             "chamadas e mensagens de Kevin e acha estranho.\n\n" +
                                             "Tyler movido pela sua curiosidade pega o celular de sua irmã");
@@ -320,7 +322,7 @@ public class Jogo {
                                             "  tayLer\n" +
                                             "  keVIn");
                                     System.out.println("----------------------------------------------------------------");
-                                    while (!condicaoResposta){
+                                    while (!condicaoResposta) {
                                         try {
                                             System.out.println("Qual é senha para acessar o celular da Jade:");
                                             int resposta = sc.nextInt();
@@ -332,7 +334,8 @@ public class Jogo {
                                                 System.out.println("Senha incorreta\n");
                                                 if (tentativas == 2) {
                                                     System.out.println("*DICA: observe os padroes das palavras*");
-                                                }if(tentativas==3){
+                                                }
+                                                if (tentativas == 3) {
                                                     System.out.println("*DICA: aquelas em maisucula*");
                                                 }
 
@@ -353,7 +356,7 @@ public class Jogo {
                                     TimeUnit.SECONDS.sleep(3);
                                     System.out.println("Tyler: É quando causa problemas para dentro de casa, igual da última vez...\n\n");
                                     TimeUnit.SECONDS.sleep(3);
-                                    System.out.println ("Enquanto Tyler e Jade discutem, Kevin  depois de ter voltado do banheiro e ido pro quarto, estava tentando jogar videogame vê que está demorando demais para o jogo iniciar e decide ir atras de Tyler \n " +
+                                    System.out.println("Enquanto Tyler e Jade discutem, Kevin  depois de ter voltado do banheiro e ido pro quarto, estava tentando jogar videogame vê que está demorando demais para o jogo iniciar e decide ir atras de Tyler \n " +
                                             "para avisar que o jogo pode estar com problemas e nisso ele acaba ouvindo a discussão de Tyler e Jade  ");
                                     System.out.println("Tyler: Por que você voltou a se envolver com ele?\n\n");
                                     TimeUnit.SECONDS.sleep(2);
@@ -367,7 +370,7 @@ public class Jogo {
                                             "Para que Kevin entre no quarto resolva o desafio.\n");
                                     TimeUnit.SECONDS.sleep(2);
                                     System.out.println("-------------------------------------------------------------------");
-                                    System.out.printf("%36s","DESAFIO ACESSE O QUARTO!!!\n");
+                                    System.out.printf("%36s", "DESAFIO ACESSE O QUARTO!!!\n");
                                     System.out.println("-------------------------------------------------------------------");
                                     System.out.println("sabendo que a senha foi mostrada em alguma parte da historia.");
                                     System.out.println("-------------------------------------------------------------------");
@@ -487,61 +490,66 @@ public class Jogo {
                             default:
                                 break;
                         }
-                    break;
+                        break;
 
-                case 2:System.out.println("\n  <<Aqui vai algumas informações básicas sobre o jogo.>>\n"
-                        + "\n<======================================================================================================================================================>\n"
-                        + "  Opa, tudo bem, nós somos o grupo 10 e esse é o nosso projeto, "
-                        + "ele é um jogo de suspense onde você acompanha a história de 3 personagens, "
-                        + "\ncada um deles com sua personalidade própria, caso aja curiosidades, "
-                        + "é so ir no menu e escolher a opção 2,\nlá tem um breve resumo sobre cada um deles."
-                        + "O nosso jogo é um suspense onde as decisões do usuário definem o rumo que a história vai seguir,\n"
-                        + "com isso na história há elementos que o usuário precisara lembrar para responder a momentos decisivos ou desafios que surgem durante o decorrer do jogo."
-                        + "\n<======================================================================================================================================================>\n\n");
-                    break;
-                case 3:
-                    System.out.println("<<Opa, aqui você encontrar algumas informações sobre os personagens do nosso jogo e também algumas curiosidades!>>"
-                            + "\nPersonagens:\n"
-                            + "\n<================================================================================================================================================>\n"
-                            + "Jade: \n   É uma garota de 18 anos, arrogante, egoista e que em algum momento de sua vida se envolveu com uma galera barra pesada,\n" +
-                            "e com isso arrumou muitos problemas e dito isso são esses problemas que vão direcionar a história do jogo. "
-                            + "\n<================================================================================================================================================>\n "
-                            + "Kevin: \n   É um garoto de 17 anos, é um bom rapaz, que sempre busca ajudar as pessoas que ele gosta da forma como pode, "
-                            + "\ntem Tyler como seu melhor amigo e companheiro em jogos multiplayer."
-                            + "\n<================================================================================================================================================>\n"
-                            + "Tyler: \n   É um garoto de 17 anos, viciado em jogos e animes, apaixonado por tecnologia,\n"
-                            + " é o melhor amigo de Kevin e o irmão mais novo da Jade é aquele cara que só quer jogar seu jogo em paz, mas acaba sendo arrastado para toda a trama do jogo."
-                            + "\n<================================================================================================================================================>\n");
-                    break;
+                    case 2:
+                        System.out.println("\n  <<Aqui vai algumas informações básicas sobre o jogo.>>\n"
+                                + "\n<======================================================================================================================================================>\n"
+                                + "  Opa, tudo bem, nós somos o grupo 10 e esse é o nosso projeto, "
+                                + "ele é um jogo de suspense onde você acompanha a história de 3 personagens, "
+                                + "\ncada um deles com sua personalidade própria, caso aja curiosidades, "
+                                + "é so ir no menu e escolher a opção 2,\nlá tem um breve resumo sobre cada um deles."
+                                + "O nosso jogo é um suspense onde as decisões do usuário definem o rumo que a história vai seguir,\n"
+                                + "com isso na história há elementos que o usuário precisara lembrar para responder a momentos decisivos ou desafios que surgem durante o decorrer do jogo."
+                                + "\n<======================================================================================================================================================>\n\n");
+                        break;
+                    case 3:
+                        System.out.println("<<Opa, aqui você encontrar algumas informações sobre os personagens do nosso jogo e também algumas curiosidades!>>"
+                                + "\nPersonagens:\n"
+                                + "\n<================================================================================================================================================>\n"
+                                + "Jade: \n   É uma garota de 18 anos, arrogante, egoista e que em algum momento de sua vida se envolveu com uma galera barra pesada,\n" +
+                                "e com isso arrumou muitos problemas e dito isso são esses problemas que vão direcionar a história do jogo. "
+                                + "\n<================================================================================================================================================>\n "
+                                + "Kevin: \n   É um garoto de 17 anos, é um bom rapaz, que sempre busca ajudar as pessoas que ele gosta da forma como pode, "
+                                + "\ntem Tyler como seu melhor amigo e companheiro em jogos multiplayer."
+                                + "\n<================================================================================================================================================>\n"
+                                + "Tyler: \n   É um garoto de 17 anos, viciado em jogos e animes, apaixonado por tecnologia,\n"
+                                + " é o melhor amigo de Kevin e o irmão mais novo da Jade é aquele cara que só quer jogar seu jogo em paz, mas acaba sendo arrastado para toda a trama do jogo."
+                                + "\n<================================================================================================================================================>\n");
+                        break;
 
-                case 4:
-                    System.out.println("Opa, tudo bem, nós somos o grupo 10 e esse é o nosso projeto, "
-                            + "ele é um jogo de suspense onde você acompanha a história de 3 personagens, "
-                            + "\ncada um deles com sua personalidade própria, caso aja curiosidades, "
-                            + "é so ir no menu e escolher a opção 2,\nlá tem um breve resumo sobre cada um deles."
-                            + " \nO Nosso grupo é formado por 5 integrantes sendo eles: \n"
-                            + "<===================================>"
-                            + "\n->Ana Carolina Guimarães Sousa\n"
-                            + "<===================================>"
-                            + "\n->Barbara Vitoria Da Silva Santos\n"
-                            + "<===================================>"
-                            + "\n->Cleiton Ribeiro Da Silva\n"
-                            + "<===================================>"
-                            + "\n->Daniel Augusto Magalhães França\n"
-                            + "<===================================>"
-                            + "\n->Jenifer Mirela Sousa Alves\n"
-                            + "<===========================================>\n"
-                            + "\n<<Nosso jogo foi criado com muito entusiamos, carinho e dedicação, esperamos que você se divirta jogando igual a nós programando! (>.<).>>\n");
-                    break;
+                    case 4:
+                        System.out.println("Opa, tudo bem, nós somos o grupo 10 e esse é o nosso projeto, "
+                                + "ele é um jogo de suspense onde você acompanha a história de 3 personagens, "
+                                + "\ncada um deles com sua personalidade própria, caso aja curiosidades, "
+                                + "é so ir no menu e escolher a opção 2,\nlá tem um breve resumo sobre cada um deles."
+                                + " \nO Nosso grupo é formado por 5 integrantes sendo eles: \n"
+                                + "<===================================>"
+                                + "\n->Ana Carolina Guimarães Sousa\n"
+                                + "<===================================>"
+                                + "\n->Barbara Vitoria Da Silva Santos\n"
+                                + "<===================================>"
+                                + "\n->Cleiton Ribeiro Da Silva\n"
+                                + "<===================================>"
+                                + "\n->Daniel Augusto Magalhães França\n"
+                                + "<===================================>"
+                                + "\n->Jenifer Mirela Sousa Alves\n"
+                                + "<===========================================>\n"
+                                + "\n<<Nosso jogo foi criado com muito entusiamos, carinho e dedicação, esperamos que você se divirta jogando igual a nós programando! (>.<).>>\n");
+                        break;
 
-                case 5:
-                    System.out.println("|===============|\n Jogo encerrado!\n|===============|\n  Até a próxima!\n      ^-^\n|===============|");
-                    break;
-                default:
-
-
-
+                    case 5:
+                        System.out.println("|===============|\n Jogo encerrado!\n|===============|\n  Até a próxima!\n      ^-^\n|===============|");
+                        break;
+                    default:
+                        System.out.println("Opção invalida");
+                        break;
+                }
+            }catch (InputMismatchException exception) {
+                System.out.println("\nCaracteres não permitidos, insira apenas números.\n");
+                sc.nextLine();
             }
 
         }while (iniciar != 5 && iniciar !=1);
-    }}
+    }
+}
