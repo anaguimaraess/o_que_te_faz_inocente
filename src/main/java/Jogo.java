@@ -9,6 +9,7 @@ public class Jogo {
         Scanner input = new Scanner(System.in);
         int iniciar;
         int decisaoEntrar = 0;
+        int pontos = 2;
         do {
             System.out.println("<----------------->\n"
                     + ">>Inicio de Jogo!<<\n"
@@ -101,10 +102,25 @@ public class Jogo {
                                     "\nApós algum tempo ele decide ir atras dela, mesmo com medo, vai até o segurança, ao chegar lá o segurança encara Kevin e pergunta o que ele quer, Kevin pede para entrar e o segurança solicita a senha de entrada.\n");
 
                             String senha = "";
+                            int valorde = 0;
                             while(!senha.equalsIgnoreCase("carvão") && !senha.equalsIgnoreCase("carvao")){
                                 System.out.println("\nDigite a senha: ");
                                 String senhaDoUsuario = sc.next();
                                 senha = senhaDoUsuario;
+                                if (!senha.equalsIgnoreCase("carvão") && !senha.equalsIgnoreCase("carvao")  && pontos > 0 && valorde < 1){
+                                    System.out.println("Número de dicas atual:  " + pontos + "\nQuer usar dica? Digite 'sim' ou 'não'" );
+                                    String userYesOrNot = sc.next();
+                                    if (userYesOrNot.equalsIgnoreCase("sim")){
+                                        pontos -= 1;
+                                        System.out.println("Agora seu número atual de dicas é:  " + pontos);
+                                        System.out.println("Dica: Lembre-se do enigma que apareceu anteriormente, a resposta é apenas um substantivo.");
+                                        valorde +=1;
+                                    }else{
+                                        System.out.println("Ok...");
+                                    }
+                                }else{
+                                    pontos += 1;
+                                }
                             }
                             System.out.println("Kevin entra e procura por Jade, vê ela conversando com um homem suspeito e com uma expressão de medo. \n" +
                                     "Com isso ele deduz que aquele seja a pessoa para a qual ela está devendo.\n" +
