@@ -579,38 +579,36 @@ public class Jogo {
                                     System.out.println("-------------------------------------------------------------------");
                                     System.out.printf("%36s", "DESAFIO  LIBERE AS CORDENADAS !!!\n");
                                     System.out.println("-------------------------------------------------------------------");
-                                    System.out.println("Para receber a coordenada :"); // mudar esse enigma pois não é apresentado na histaria corrente
+                                    System.out.println("Para receber a coordenada : converta a resposta do desafio anterior em \n " +
+                                            "binário e deixa apenas os valores verdadeiros\n");
                                     System.out.println("-------------------------------------------------------------------");
 
                                     int senhaQuarto = 0;
                                     int maximoDeDicas10 = 0;
                                     int acertouDePrimeira9 = 0;
-                                    while (senhaQuarto != 2000) {
+                                    while (senhaQuarto != 111111 ) {
                                         try {
                                             System.out.println("Qual é senha para entar no quarto:");
                                             senhaQuarto = sc.nextInt();
-                                            if (senhaQuarto == 2000) { // resposta sera alterada
-                                                System.out.println("Coordenadas liberadas = 50°48’49.00″N, 2°28’28.99″W\n");
-                                                if (senhaQuarto != 2000 && pontos > 0 && maximoDeDicas10 < 1) {
-                                                    acertouDePrimeira9 += 1;
-                                                    System.out.println("Você errou!");
-                                                    System.out.println("Número de dicas atual:  " + pontos + "\nQuer usar dica? Digite 'sim' ou 'não'");
-                                                    String decisaoSimOuNao = sc.next();
-                                                    if (decisaoSimOuNao.equalsIgnoreCase("sim")) {
-                                                        pontos -= 1;
-                                                        System.out.println("Agora seu número atual de dicas é:  " + pontos);
-                                                        System.out.println("Dica: ");
-                                                        maximoDeDicas10 += 1;
-                                                    } else {
-                                                        System.out.println("Ok...");
-                                                    }
-                                                } else if (senhaQuarto == 2000) {
-                                                    System.out.println("Certa resposta!");
-                                                    if (acertouDePrimeira9 == 0) {
-                                                        pontos += 1;
-                                                    }
-                                                    break;
+                                            if (resposta != 111111 && pontos > 0 && maximoDeDicas9 < 1) {
+                                                acertouDePrimeira8 += 1;
+                                                System.out.println("Você errou!");
+                                                System.out.println("Número de dicas atual:  " + pontos + "\nQuer usar dica? Digite 'sim' ou 'não'");
+                                                String decisaoSimOuNao = sc.next();
+                                                if (decisaoSimOuNao.equalsIgnoreCase("sim")) {
+                                                    pontos -= 1;
+                                                    System.out.println("Agora seu número atual de dicas é:  " + pontos);
+                                                    System.out.println("\nDica: Remova os números nulos.\n");
+                                                    maximoDeDicas9 += 1;
+                                                } else {
+                                                    System.out.println("Ok...");
                                                 }
+                                            } else if (resposta == 111111) {
+                                                System.out.println("Coordenadas liberadas = 50°48’49.00″N, 2°28’28.99″W\n");
+                                                if (acertouDePrimeira8 == 0) {
+                                                    pontos += 1;
+                                                }
+                                                break;
                                             }
                                         } catch (InputMismatchException exception) {
                                             System.out.println("\nCaracteres não permitidos, insira apenas números.\n");
