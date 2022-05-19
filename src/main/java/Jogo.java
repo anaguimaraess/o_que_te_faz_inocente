@@ -385,7 +385,7 @@ public class Jogo {
                                                     maximoDeDicas5 += 1;
                                                 } else {
                                                     System.out.println("Ok...");
-                                                    TimeUnit.SECONDS.sleep();
+                                                    TimeUnit.SECONDS.sleep(2);
                                                 }
                                             } else if (senhaDoNotebook == 19042000) {
                                                 System.out.println("Certa resposta!");
