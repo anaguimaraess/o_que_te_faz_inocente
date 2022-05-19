@@ -45,30 +45,35 @@ public class Jogo {
                                 kevin = sc.nextInt();
                                 tyler = (int) (Math.random() * 3 + 1);
                                 System.out.println("\n");
-                                switch (tyler) {
-                                    case 1:
-                                        System.out.println("Tyler escolheu Pedra");
-                                        break;
-                                    case 2:
-                                        System.out.println("Tyler escolheu Papel");
-                                        break;
-                                    case 3:
-                                        System.out.println("Tyler escolheu Tesoura");
-                                        break;
-                                }
-                                switch (kevin) {
-                                    case 1:
-                                        System.out.println("Kevin escolheu Pedra");
-                                        break;
-                                    case 2:
-                                        System.out.println("Kevin escolheu Papel");
-                                        break;
-                                    case 3:
-                                        System.out.println("Kevin escolheu Tesoura");
-                                        break;
-                                }
-                                if (kevin == tyler) {
-                                    System.out.println("Empate! Ninguém ganhou.");
+                                if(kevin >= 1 && kevin <= 3) {
+                                    switch (tyler) {
+                                        case 1:
+                                            System.out.println("Tyler escolheu Pedra");
+                                            break;
+                                        case 2:
+                                            System.out.println("Tyler escolheu Papel");
+                                            break;
+                                        case 3:
+                                            System.out.println("Tyler escolheu Tesoura");
+                                            break;
+                                    }
+                                    switch (kevin) {
+                                        case 1:
+                                            System.out.println("Kevin escolheu Pedra");
+                                            break;
+                                        case 2:
+                                            System.out.println("Kevin escolheu Papel");
+                                            break;
+                                        case 3:
+                                            System.out.println("Kevin escolheu Tesoura");
+                                            break;
+                                    }
+                                    if (kevin == tyler) {
+                                        System.out.println("Empate! Ninguém ganhou.");
+                                    }
+                                }else {
+                                    System.out.println("Digite a opção de 1 a 3, apenas");
+                                    kevin = tyler;
                                 }
                             }catch (InputMismatchException exception){
                                 System.out.println("\nCaracteres não permitido, insira apenas números.\n");
