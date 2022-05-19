@@ -16,17 +16,13 @@ public class Jogo {
                 System.out.println("<----------------->\n"
                         + ">>Inicio de Jogo!<<\n"
                         + "<<==============>>");
-                TimeUnit.SECONDS.sleep(2);
                 System.out.println(" >>Menu do jogo<< \n<<==============>>"
                         + "\n\n <<= 1-Iniciar | 2-Informações | 3-Personagens | 4-Créditos | 5-Fechar jogo =>>");
-                TimeUnit.SECONDS.sleep(2);
                 iniciar = sc.nextInt();
 
                 //Usei o switch case para criar um menu de opções onde o jogador pode decidir se ele prefere ir direto ao jogo, informações sobre personagens e etc.//
                 switch (iniciar) {
                     case 1:
-                        System.out.println("Começo da História");
-                        TimeUnit.SECONDS.sleep(2);
                         int kevin = 0, tyler = 0, comparar = 0;
                         System.out.println("\nDurante uma tarde de verão, enquanto Kevin jogava Perguntados online com seu amigo Tyler," +
                                 "\nsua mãe pede para que ele pause o jogo online para que ela possa limpar a mesa, ele acaba se irritando" +
@@ -44,17 +40,13 @@ public class Jogo {
                         TimeUnit.SECONDS.sleep(3);
 
                         System.out.println("____JOKENPÔ____\n");
-                        TimeUnit.SECONDS.sleep(2);
                         System.out.println("1 - Pedra");
-                        TimeUnit.SECONDS.sleep(2);
                         System.out.println("2 - Papel");
-                        TimeUnit.SECONDS.sleep(2);
                         System.out.println("3 - Tesoura");
-                        TimeUnit.SECONDS.sleep(2);
+
                         do {
                             try {
                                 System.out.println("Kevin digite a sua opção: ");
-                                TimeUnit.SECONDS.sleep(2);
                                 kevin = sc.nextInt();
                                 tyler = (int) (Math.random() * 3 + 1);
                                 System.out.println("\n");
@@ -62,54 +54,53 @@ public class Jogo {
                                 switch (tyler) {
                                     case 1:
                                         System.out.println("Tyler escolheu Pedra");
-                                        TimeUnit.SECONDS.sleep(2);
+                                        TimeUnit.SECONDS.sleep(1);
                                         break;
                                     case 2:
                                         System.out.println("Tyler escolheu Papel");
-                                        TimeUnit.SECONDS.sleep(2);
+                                        TimeUnit.SECONDS.sleep(1);
                                         break;
                                     case 3:
                                         System.out.println("Tyler escolheu Tesoura");
-                                        TimeUnit.SECONDS.sleep(2);
+                                        TimeUnit.SECONDS.sleep(1);
                                         break;
                                 }
                                 switch (kevin) {
                                     case 1:
                                         System.out.println("Kevin escolheu Pedra");
-                                        TimeUnit.SECONDS.sleep(2);
+                                        TimeUnit.SECONDS.sleep(1);
                                         break;
                                     case 2:
                                         System.out.println("Kevin escolheu Papel");
-                                        TimeUnit.SECONDS.sleep(2);
+                                        TimeUnit.SECONDS.sleep(1);
                                         break;
                                     case 3:
                                         System.out.println("Kevin escolheu Tesoura");
-                                        TimeUnit.SECONDS.sleep(2);
+                                        TimeUnit.SECONDS.sleep(1);
                                         break;
                                 }
                                 if (kevin == tyler) {
                                     System.out.println("Empate! Ninguém ganhou.");
-                                    TimeUnit.SECONDS.sleep(2);
+                                    TimeUnit.SECONDS.sleep(1);
                                 }
                             }catch (InputMismatchException exception){
                                 System.out.println("\nCaracteres não permitido, insira apenas números.\n");
-                                TimeUnit.SECONDS.sleep(2);
+                                TimeUnit.SECONDS.sleep(1);
                                 String enter= sc.nextLine();
                             }
                         } while (kevin == tyler);
                         if ((kevin == 1 && tyler == 3) || (kevin == 2 && tyler == 1) || (kevin == 3 && tyler == 2)) {
                             System.out.println("Kevin ganhou!");
-                            TimeUnit.SECONDS.sleep(2);
+                            TimeUnit.SECONDS.sleep(1);
                             comparar = 2;
                         } else {
                             comparar = 1;
                             System.out.println("Tyler ganhou!");
-                            TimeUnit.SECONDS.sleep(2);
+                            TimeUnit.SECONDS.sleep(1);
                         }
 
                         switch (comparar) {
                             case 1:
-                                System.out.println("____História 1____");
                                 TimeUnit.SECONDS.sleep(2);
                                 System.out.println("\n\nKevin depois de perder, sai do quarto e no corredor se encontra com Jade que o chama e pede" +
                                         "\num favor, Jade pede para que ele vá até o seu quarto para pegar uma caixa em cima do guarda-roupas, " +
@@ -136,23 +127,20 @@ public class Jogo {
                                 while (!senha.equalsIgnoreCase("carvão") && !senha.equalsIgnoreCase("carvao")) {
                                     
                                         System.out.println("\nDigite a senha: ");
-                                        TimeUnit.SECONDS.sleep(2);
                                         String senhaDoUsuario = sc.next();
                                         senha = senhaDoUsuario;
                                         if (!senha.equalsIgnoreCase("carvão") && !senha.equalsIgnoreCase("carvao") && pontos > 0 && maximoDeDicas < 1) {
                                             System.out.println("Número de dicas atual:  " + pontos + "\nQuer usar dica? Digite 'sim' ou 'não'");
-                                            TimeUnit.SECONDS.sleep(2);
                                             String decisaoSimOuNao = sc.next();
                                             if (decisaoSimOuNao.equalsIgnoreCase("sim")) {
                                                 pontos -= 1;
                                                 System.out.println("Agora seu número atual de dicas é:  " + pontos);
-                                                TimeUnit.SECONDS.sleep(2);
+                                                TimeUnit.SECONDS.sleep(1);
                                                 System.out.println("Dica: Lembre-se do enigma que apareceu anteriormente, a resposta é apenas um substantivo.");
-                                                TimeUnit.SECONDS.sleep(3);
                                                 maximoDeDicas += 1;
                                             } else {
                                                 System.out.println("Ok...");
-                                                TimeUnit.SECONDS.sleep(2);
+                                                TimeUnit.SECONDS.sleep(1);
                                             }
                                         } else {
                                             pontos += 1;
@@ -167,17 +155,14 @@ public class Jogo {
                                 int escolhaNaBoate = 0;
                                 while (escolhaNaBoate == 0) {
                                     System.out.println("\nDigite o número do que Kevin deve fazer: ");
-                                    TimeUnit.SECONDS.sleep(2);
                                     System.out.println("\n1 - Tentar avançar para enfrentar o Agiota." +
                                             "\n2 - Chegar de forma discreta para negociar com o agiota e pagar a dívida de Jade.");
-                                    TimeUnit.SECONDS.sleep(3);
                                     escolhaNaBoate = sc.nextInt();
 
                                     if (escolhaNaBoate == 1) {
                                         escolhaNaBoate = 1;
                                         System.out.println("\nKevin tenta avançar para enfrentar o Agiota, e acaba sendo baleado." +
                                                 "\n\nFIM DO JOGO.");
-                                        TimeUnit.SECONDS.sleep(3);
                                     } else if (escolhaNaBoate == 2) {
                                         escolhaNaBoate = 2;
                                         System.out.println("\nO Agiota, após receber a transferência, decide liberar os dois, eles saem e vão para o carro em silêncio, " +
@@ -186,7 +171,6 @@ public class Jogo {
                                                 "\t\t“Jade se emociona e beija Kevin”\n");
                                         TimeUnit.SECONDS.sleep(3);
                                         System.out.println("FIM DE JOGO.");
-                                        TimeUnit.SECONDS.sleep(2);
                                     } else {
                                         escolhaNaBoate = 0;
                                     }
@@ -194,7 +178,6 @@ public class Jogo {
                                 break;
 
                             case 2:
-                                System.out.println("\n____Historia 2____");
                                 TimeUnit.SECONDS.sleep(2);
                                 System.out.println("\nKevin ganhou então ele começa a jogar, e distraído, começa a pensar na Jade");
                                 TimeUnit.SECONDS.sleep(3);
@@ -211,29 +194,25 @@ public class Jogo {
                                 int acertouDePrimeira = 0;
                                 do {
                                     System.out.println("\nDe quem é a famosa frase “Penso, logo existo”?");
-                                    TimeUnit.SECONDS.sleep(2);
                                     pergunta1 = sc.next();
                                     if (!pergunta1.equalsIgnoreCase("Descartes") && pontos > 0 && maximoDeDicas2 < 1) {
                                         System.out.println("Você errou!");
-                                        TimeUnit.SECONDS.sleep(2);
                                         acertouDePrimeira += 1;
                                         System.out.println("Número de dicas atual:  " + pontos + "\nQuer usar dica? Digite 'sim' ou 'não'");
-                                        TimeUnit.SECONDS.sleep(2);
+                                        TimeUnit.SECONDS.sleep(1);
                                         String decisaoSimOuNao = sc.next();
                                         if (decisaoSimOuNao.equalsIgnoreCase("sim")) {
                                             pontos -= 1;
                                             System.out.println("Agora seu número atual de dicas é:  " + pontos);
-                                            TimeUnit.SECONDS.sleep(2);
                                             System.out.println("Dica: Nome de um filósofo, físico e matemático francês, nome latino: Renatus Cartesius.");
-                                            TimeUnit.SECONDS.sleep(2);
+                                            TimeUnit.SECONDS.sleep(1);
                                             maximoDeDicas2 += 1;
                                         } else {
                                             System.out.println("Ok...");
-                                            TimeUnit.SECONDS.sleep(2);
+                                            TimeUnit.SECONDS.sleep(1);
                                         }
                                     } else if (pergunta1.equalsIgnoreCase("Descartes")) {
                                         System.out.println("Certa resposta");
-                                        TimeUnit.SECONDS.sleep(2);
                                         if (acertouDePrimeira == 0) {
                                             pontos += 1;
                                         }
@@ -249,29 +228,26 @@ public class Jogo {
                                             "\nA) 50" +
                                             "\nB) Infinitas" +
                                             "\nC) 7");
-                                    TimeUnit.SECONDS.sleep(2);
                                     pergunta2 = sc.next();
                                     if (!pergunta2.equalsIgnoreCase("b") && pontos > 0 && maximoDeDicas3 < 1) {
                                         acertouDePrimeira2 += 1;
                                         System.out.println("Você errou!");
-                                        TimeUnit.SECONDS.sleep(2);
+                                        TimeUnit.SECONDS.sleep(1);
                                         System.out.println("Número de dicas atual:  " + pontos + "\nQuer usar dica? Digite 'sim' ou 'não'");
-                                        TimeUnit.SECONDS.sleep(2);
                                         String decisaoSimOuNao = sc.next();
                                         if (decisaoSimOuNao.equalsIgnoreCase("sim")) {
                                             pontos -= 1;
                                             System.out.println("Agora seu número atual de dicas é:  " + pontos);
-                                            TimeUnit.SECONDS.sleep(2);
+                                            TimeUnit.SECONDS.sleep(1);
                                             System.out.println("Dica: Pi é uma dízima periódica.");
-                                            TimeUnit.SECONDS.sleep(2);
+                                            TimeUnit.SECONDS.sleep(1);
                                             maximoDeDicas3 += 1;
                                         } else {
                                             System.out.println("Ok...");
-                                            TimeUnit.SECONDS.sleep(2);
+                                            TimeUnit.SECONDS.sleep(1);
                                         }
                                     } else if (pergunta2.equalsIgnoreCase("b")) {
                                         System.out.println("Certa resposta!");
-                                        TimeUnit.SECONDS.sleep(2);
                                         if (acertouDePrimeira2 == 0) {
                                             pontos += 1;
                                         }
@@ -289,29 +265,26 @@ public class Jogo {
                                                 "\n1) Pico da neblina" +
                                                 "\n2) Pico da bandeira" +
                                                 "\n3) Pedra da mina");
-                                        TimeUnit.SECONDS.sleep(2);
                                         pergunta3 = sc.nextInt();
                                         if (pergunta3 != 1 && pontos > 0 && maximoDeDicas4 < 1) {
                                             acertouDePrimeira3 += 1;
                                             System.out.println("Você errou!");
-                                            TimeUnit.SECONDS.sleep(2);
+                                            TimeUnit.SECONDS.sleep(1);
                                             System.out.println("Número de dicas atual:  " + pontos + "\nQuer usar dica? Digite 'sim' ou 'não'");
-                                            TimeUnit.SECONDS.sleep(2);
+                                            TimeUnit.SECONDS.sleep(1);
                                             String decisaoSimOuNao = sc.next();
                                             if (decisaoSimOuNao.equalsIgnoreCase("sim")) {
                                                 pontos -= 1;
                                                 System.out.println("Agora seu número atual de dicas é:  " + pontos);
-                                                TimeUnit.SECONDS.sleep(2);
                                                 System.out.println("Dica: Localizado no norte do Amazonas.");
-                                                TimeUnit.SECONDS.sleep(2);
+                                                TimeUnit.SECONDS.sleep(1);
                                                 maximoDeDicas4 += 1;
                                             } else {
                                                 System.out.println("Ok...");
-                                                TimeUnit.SECONDS.sleep(2);
+                                                TimeUnit.SECONDS.sleep(1);
                                             }
                                         } else if (pergunta3 == 1) {
                                             System.out.println("Parabéns! você acertou todas!");
-                                            TimeUnit.SECONDS.sleep(2);
                                             if (acertouDePrimeira3 == 0) {
                                                 pontos += 1;
                                             }
@@ -336,7 +309,6 @@ public class Jogo {
                                         System.out.println("\nEscolha qual decisão você quer: " +
                                                 "\n1 - Entrar no quarto" +
                                                 "\n2 - Esperar na porta");
-                                        TimeUnit.SECONDS.sleep(2);
                                         entrar = sc.nextInt();
                                     } catch (InputMismatchException exception) {
                                         System.out.println("Caracteres não permitido, insira apenas números\n");
@@ -366,30 +338,27 @@ public class Jogo {
                                         try {
 
                                             System.out.println("Digite o resultado: ");
-                                            TimeUnit.SECONDS.sleep(2);
                                             int senhaUsuario = sc.nextInt();
                                             senhaDoNotebook = senhaUsuario;
                                             if (senhaDoNotebook != 19042000 && pontos > 0 && maximoDeDicas5 < 1) {
                                                 acertouDePrimeira4 += 1;
                                                 System.out.println("Você errou!");
-                                                TimeUnit.SECONDS.sleep(2);
                                                 System.out.println("Número de dicas atual:  " + pontos + "\nQuer usar dica? Digite 'sim' ou 'não'");
-                                                TimeUnit.SECONDS.sleep(2);
+                                                TimeUnit.SECONDS.sleep(1);
                                                 String decisaoSimOuNao = sc.next();
                                                 if (decisaoSimOuNao.equalsIgnoreCase("sim")) {
                                                     pontos -= 1;
                                                     System.out.println("Agora seu número atual de dicas é:  " + pontos);
-                                                    TimeUnit.SECONDS.sleep(2);
+                                                    TimeUnit.SECONDS.sleep(1);
                                                     System.out.println("Dica: Esse número convertido é a data de aniversário da Jade.");
-                                                    TimeUnit.SECONDS.sleep(2);
+                                                    TimeUnit.SECONDS.sleep(1);
                                                     maximoDeDicas5 += 1;
                                                 } else {
                                                     System.out.println("Ok...");
-                                                    TimeUnit.SECONDS.sleep(2);
+                                                    TimeUnit.SECONDS.sleep(1);
                                                 }
                                             } else if (senhaDoNotebook == 19042000) {
                                                 System.out.println("Certa resposta!");
-                                                TimeUnit.SECONDS.sleep(2);
                                                 if (acertouDePrimeira4 == 0) {
                                                     pontos += 1;
                                                 }
@@ -421,26 +390,23 @@ public class Jogo {
                                     while (!cep.equals("01545-001") && !cep.equals("01545001")) {
 
                                         System.out.println("Digite o CEP do endereço visto na mensagem anteriormente: ");
-                                        TimeUnit.SECONDS.sleep(2);
                                         String cepEndereco = sc.next();
                                         cep = cepEndereco;
                                         if (!cep.equals("01545-001") && !cep.equals("01545001") && pontos > 0 && maximoDeDicas6 < 1) {
                                             acertouDePrimeira5 += 1;
                                             System.out.println("Você errou!");
-                                            TimeUnit.SECONDS.sleep(2);
                                             System.out.println("Número de dicas atual:  " + pontos + "\nQuer usar dica? Digite 'sim' ou 'não'");
-                                            TimeUnit.SECONDS.sleep(2);
                                             String decisaoSimOuNao = sc.next();
                                             if (decisaoSimOuNao.equalsIgnoreCase("sim")) {
                                                 pontos -= 1;
                                                 System.out.println("Agora seu número atual de dicas é:  " + pontos);
-                                                TimeUnit.SECONDS.sleep(2);
+                                                TimeUnit.SECONDS.sleep(1);
                                                 System.out.println("Dica: Coloque as coordenadas no maps e pegue o cep.");
-                                                TimeUnit.SECONDS.sleep(2);
+                                                TimeUnit.SECONDS.sleep(1);
                                                 maximoDeDicas6 += 1;
                                             } else {
                                                 System.out.println("Ok...");
-                                                TimeUnit.SECONDS.sleep(2);
+                                                TimeUnit.SECONDS.sleep(1);
                                             }
                                         } else if (cep.equals("01545-001") && cep.equals("01545001")) {
                                             System.out.println("Certa resposta!");
@@ -477,36 +443,31 @@ public class Jogo {
                                         try {
 
                                             System.out.println("Qual das opções abaixo é o aniversário da Jade?");
-                                            TimeUnit.SECONDS.sleep(2);
+                                            TimeUnit.SECONDS.sleep(1);
                                             System.out.println("1) 19/03/2000");
-                                            TimeUnit.SECONDS.sleep(2);
                                             System.out.println("2) 19/04/2000");
-                                            TimeUnit.SECONDS.sleep(2);
                                             System.out.println("3) 19/03/2001");
-                                            TimeUnit.SECONDS.sleep(2);
                                             int opcaoEscolhida = sc.nextInt();
                                             opcaoDesafioNascimento = opcaoEscolhida;
                                             if (opcaoDesafioNascimento != 2 && pontos > 0 && maximoDeDicas7 < 1) {
                                                 acertouDePrimeira6 += 1;
                                                 System.out.println("Você errou!");
-                                                TimeUnit.SECONDS.sleep(2);
                                                 System.out.println("Número de dicas atual:  " + pontos + "\nQuer usar dica? Digite 'sim' ou 'não'");
-                                                TimeUnit.SECONDS.sleep(2);
                                                 String decisaoSimOuNao = sc.next();
                                                 if (decisaoSimOuNao.equalsIgnoreCase("sim")) {
                                                     pontos -= 1;
                                                     System.out.println("Agora seu número atual de dicas é:  " + pontos);
-                                                    TimeUnit.SECONDS.sleep(2);
+                                                    TimeUnit.SECONDS.sleep(1);
                                                     System.out.println("Dica: Mês da páscoa.");
-                                                    TimeUnit.SECONDS.sleep(2);
+                                                    TimeUnit.SECONDS.sleep(1);
                                                     maximoDeDicas7 += 1;
                                                 } else {
                                                     System.out.println("Ok...");
-                                                    TimeUnit.SECONDS.sleep(2);
+                                                    TimeUnit.SECONDS.sleep(1);
                                                 }
                                             } else if (opcaoDesafioNascimento == 2) {
                                                 System.out.println("Certa resposta!");
-                                                TimeUnit.SECONDS.sleep(2);
+                                                TimeUnit.SECONDS.sleep(1);
                                                 if (acertouDePrimeira6 == 0) {
                                                     pontos += 1;
                                                 }
@@ -534,20 +495,17 @@ public class Jogo {
                                         try {
 
                                             System.out.println("O que Kevin deve fazer? ");
-                                            TimeUnit.SECONDS.sleep(2);
                                             System.out.println("1) Tentar avançar para enfrentar o Agiota.\n" +
                                                     "2) Chegar de forma discreta para negociar com o agiota e pagar a dívida de Jade.\n");
-                                            TimeUnit.SECONDS.sleep(2);
                                             int decisaoDigitada = sc.nextInt();
 
                                             if (decisaoDigitada == 1) {
                                                 decisaoParaAgir = 1;
                                                 System.out.println("Kevin tenta avançar no agiota mas o mesmo rapidamente se defende, atirando em Kevin.");
-                                                TimeUnit.SECONDS.sleep(3);
+                                                TimeUnit.SECONDS.sleep(1);
                                                 System.out.println("POW! ");
-                                                TimeUnit.SECONDS.sleep(3);
+                                                TimeUnit.SECONDS.sleep(2);
                                                 System.out.println("\n\nFIM DE JOGO!\n");
-                                                TimeUnit.SECONDS.sleep(3);
 
                                             } else if (decisaoDigitada == 2) {
                                                 decisaoParaAgir = 2;
@@ -578,8 +536,6 @@ public class Jogo {
                                 } else {
                                     System.out.println("\nKevin ouve Tyler saindo do quarto e assustado, se esconde.");
                                     TimeUnit.SECONDS.sleep(3);
-                                    //Historia3, a ser ligada a decisão na Histora 2
-                                    int tentativas = 0, erroJogadas = 0, acertos = 0;
                                     System.out.println("Enquanto Kevin se prepara para jogar, Tyler que perdeu no “perguntados”, diz que vai para a cozinha, \n" +
                                             "nisso Kevin pega o controle e esperar subir vídeo para jogar. \n" +
                                             "Enquanto Tyler vai para a cozinha, no meio do caminho ele houve um barulho estranho" +
@@ -621,29 +577,25 @@ public class Jogo {
                                     while (senhaCelular != 1556) {
                                         try {
                                             System.out.println("Qual é senha para acessar o celular da Jade:");
-                                            TimeUnit.SECONDS.sleep(2);
                                             senhaCelular = sc.nextInt();
                                             if (senhaCelular != 1556 && pontos > 0 && maximoDeDicas8 < 1) {
                                                 acertouDePrimeira7 += 1;
                                                 System.out.println("Você errou!");
-                                                TimeUnit.SECONDS.sleep(2);
                                                 System.out.println("Número de dicas atual:  " + pontos + "\nQuer usar dica? Digite 'sim' ou 'não'");
-                                                TimeUnit.SECONDS.sleep(2);
                                                 String decisaoSimOuNao = sc.next();
                                                 if (decisaoSimOuNao.equalsIgnoreCase("sim")) {
                                                     pontos -= 1;
                                                     System.out.println("Agora seu número atual de dicas é:  " + pontos);
-                                                    TimeUnit.SECONDS.sleep(2);
+                                                    TimeUnit.SECONDS.sleep(1);
                                                     System.out.println("Dica: Padrão de letras maiúsculas");
-                                                    TimeUnit.SECONDS.sleep(2);
                                                     maximoDeDicas8 += 1;
                                                 } else {
                                                     System.out.println("Ok...");
-                                                    TimeUnit.SECONDS.sleep(2);
+                                                    TimeUnit.SECONDS.sleep(1);
                                                 }
                                             } else if (senhaCelular == 1556) {
                                                 System.out.println("Certa resposta!");
-                                                TimeUnit.SECONDS.sleep(2);
+                                                TimeUnit.SECONDS.sleep(1);
                                                 if (acertouDePrimeira7 == 0) {
                                                     pontos += 1;
                                                 }
@@ -696,29 +648,27 @@ public class Jogo {
                                     while (resposta != 2000) {
                                         try {
                                             System.out.println("Qual é senha para entar no quarto:");
-                                            TimeUnit.SECONDS.sleep(2);
                                             resposta = sc.nextInt();
                                             if (resposta != 2000 && pontos > 0 && maximoDeDicas9 < 1) {
                                                 acertouDePrimeira8 += 1;
                                                 System.out.println("Você errou!");
-                                                TimeUnit.SECONDS.sleep(2);
+                                                TimeUnit.SECONDS.sleep(1);
                                                 System.out.println("Número de dicas atual:  " + pontos + "\nQuer usar dica? Digite 'sim' ou 'não'");
-                                                TimeUnit.SECONDS.sleep(2);
                                                 String decisaoSimOuNao = sc.next();
                                                 if (decisaoSimOuNao.equalsIgnoreCase("sim")) {
                                                     pontos -= 1;
                                                     System.out.println("Agora seu número atual de dicas é:  " + pontos);
-                                                    TimeUnit.SECONDS.sleep(2);
+                                                    TimeUnit.SECONDS.sleep(1);
                                                     System.out.println("Dica: ano de Jade.");
-                                                    TimeUnit.SECONDS.sleep(2);
+                                                    TimeUnit.SECONDS.sleep(1);
                                                     maximoDeDicas9 += 1;
                                                 } else {
                                                     System.out.println("Ok...");
-                                                    TimeUnit.SECONDS.sleep(2);
+                                                    TimeUnit.SECONDS.sleep(1);
                                                 }
                                             } else if (resposta == 2000) {
                                                 System.out.println("Acesso liberado!");
-                                                TimeUnit.SECONDS.sleep(2);
+                                                TimeUnit.SECONDS.sleep(1);
                                                 if (acertouDePrimeira8 == 0) {
                                                     pontos += 1;
                                                 }
@@ -757,28 +707,26 @@ public class Jogo {
                                             System.out.println("Qual é senha para entar no quarto:");
                                             TimeUnit.SECONDS.sleep(2);
                                             senhaQuarto = sc.nextInt();
-                                            if (resposta != 111111 && pontos > 0 && maximoDeDicas9 < 1) {
-                                                acertouDePrimeira8 += 1;
+                                            if (resposta != 111111 && pontos > 0 && maximoDeDicas10 < 1) {
+                                                acertouDePrimeira9 += 1;
                                                 System.out.println("Você errou!");
-                                                TimeUnit.SECONDS.sleep(2);
                                                 System.out.println("Número de dicas atual:  " + pontos + "\nQuer usar dica? Digite 'sim' ou 'não'");
-                                                TimeUnit.SECONDS.sleep(2);
                                                 String decisaoSimOuNao = sc.next();
                                                 if (decisaoSimOuNao.equalsIgnoreCase("sim")) {
                                                     pontos -= 1;
                                                     System.out.println("Agora seu número atual de dicas é:  " + pontos);
-                                                    TimeUnit.SECONDS.sleep(2);
+                                                    TimeUnit.SECONDS.sleep(1);
                                                     System.out.println("\nDica: Remova os números nulos.\n");
-                                                    TimeUnit.SECONDS.sleep(2);
-                                                    maximoDeDicas9 += 1;
+                                                    TimeUnit.SECONDS.sleep(1);
+                                                    maximoDeDicas10 += 1;
                                                 } else {
                                                     System.out.println("Ok...");
-                                                    TimeUnit.SECONDS.sleep(2);
+                                                    TimeUnit.SECONDS.sleep(1);
                                                 }
                                             } else if (resposta == 111111) {
                                                 System.out.println("Coordenadas liberadas = 50°48’49.00″N, 2°28’28.99″W\n");
-                                                TimeUnit.SECONDS.sleep(2);
-                                                if (acertouDePrimeira8 == 0) {
+                                                TimeUnit.SECONDS.sleep(1);
+                                                if (acertouDePrimeira9 == 0) {
                                                     pontos += 1;
                                                 }
                                                 break;
@@ -815,29 +763,25 @@ public class Jogo {
                                     while (!senhaPorta.equalsIgnoreCase("boate-marrom")) {
                                         try {
                                             System.out.println("Qual é senha para entar no quarto:");
-                                            TimeUnit.SECONDS.sleep(2);
                                             senhaPorta = sc.next();
                                             if (!senhaPorta.equalsIgnoreCase("boate-marrom") && pontos > 0 && maximoDeDicas11 < 1) {
                                                 acertouDePrimeira10 += 1;
                                                 System.out.println("Você errou!");
-                                                TimeUnit.SECONDS.sleep(2);
                                                 System.out.println("Número de dicas atual:  " + pontos + "\nQuer usar dica? Digite 'sim' ou 'não'");
-                                                TimeUnit.SECONDS.sleep(2);
                                                 String decisaoSimOuNao = sc.next();
                                                 if (decisaoSimOuNao.equalsIgnoreCase("sim")) {
                                                     pontos -= 1;
                                                     System.out.println("Agora seu número atual de dicas é:  " + pontos);
-                                                    TimeUnit.SECONDS.sleep(2);
                                                     System.out.println("Dica: Use o google e pesquise 'decodificador base64'. ");
-                                                    TimeUnit.SECONDS.sleep(2);
+                                                    TimeUnit.SECONDS.sleep(1);
                                                     maximoDeDicas11 += 1;
                                                 } else {
                                                     System.out.println("Ok...");
-                                                    TimeUnit.SECONDS.sleep(2);
+                                                    TimeUnit.SECONDS.sleep(1);
                                                 }
                                             } else if (senhaPorta.equalsIgnoreCase("boate-marrom")) {
                                                 System.out.println("Porta aberta!");
-                                                TimeUnit.SECONDS.sleep(2);
+                                                TimeUnit.SECONDS.sleep(1);
                                                 if (acertouDePrimeira10 == 0) {
                                                     pontos += 1;
                                                 }
@@ -929,11 +873,11 @@ public class Jogo {
 
                     case 5:
                         System.out.println("|===============|\n Jogo encerrado!\n|===============|\n  Até a próxima!\n      ^-^\n|===============|");
-                        TimeUnit.SECONDS.sleep(5);
+                        TimeUnit.SECONDS.sleep(1);
                         break;
                     default:
                         System.out.println("Opção invalida");
-                        TimeUnit.SECONDS.sleep(2);
+                        TimeUnit.SECONDS.sleep(3);
                         break;
                 }
             } catch (InputMismatchException exception) {
