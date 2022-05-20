@@ -29,11 +29,11 @@ public class Jogo {
                                 "\ncom isso e seu amigo Tyler ouve e o convida para ir até sua casa, ele aceita e vai," +
                                 "\nao chegar lá, Kevin diz: ");
                         TimeUnit.SECONDS.sleep(3);
-                        System.out.println("\nKevin: A sua irmã está por aí?");
+                        System.out.println("\nKevin: A sua irmã está por aí?\n");
                         TimeUnit.SECONDS.sleep(3);
-                        System.out.println("Tyler: Você não veio aqui para jogar? O que você quer com ela?");
+                        System.out.println("Tyler: Você não veio aqui para jogar? O que você quer com ela?\n");
                         TimeUnit.SECONDS.sleep(3);
-                        System.out.println("Kevin: Calma cara, é só um pergunta!");
+                        System.out.println("Kevin: Calma cara, é só um pergunta!\n");
                         TimeUnit.SECONDS.sleep(3);
                         System.out.println("Tyler: Então vamos lá para cima jogar, só que só tem um controle, vamos ter que jogar Perguntados. \n"
                                 + "Ai a gente decide quem joga primeiro no Jokenpô. \n");
@@ -51,37 +51,42 @@ public class Jogo {
                                 tyler = (int) (Math.random() * 3 + 1);
                                 System.out.println("\n");
                                 TimeUnit.SECONDS.sleep(2);
-                                switch (tyler) {
-                                    case 1:
-                                        System.out.println("Tyler escolheu Pedra");
+                                if (kevin>=1 && kevin<3){
+                                    switch (tyler) {
+                                        case 1:
+                                            System.out.println("Tyler escolheu Pedra");
+                                            TimeUnit.SECONDS.sleep(1);
+                                            break;
+                                        case 2:
+                                            System.out.println("Tyler escolheu Papel");
+                                            TimeUnit.SECONDS.sleep(1);
+                                            break;
+                                        case 3:
+                                            System.out.println("Tyler escolheu Tesoura");
+                                            TimeUnit.SECONDS.sleep(1);
+                                            break;
+                                    }
+                                    switch (kevin) {
+                                        case 1:
+                                            System.out.println("Kevin escolheu Pedra");
+                                            TimeUnit.SECONDS.sleep(1);
+                                            break;
+                                        case 2:
+                                            System.out.println("Kevin escolheu Papel");
+                                            TimeUnit.SECONDS.sleep(1);
+                                            break;
+                                        case 3:
+                                            System.out.println("Kevin escolheu Tesoura");
+                                            TimeUnit.SECONDS.sleep(1);
+                                            break;
+                                    }
+                                    if (kevin == tyler) {
+                                        System.out.println("Empate! Ninguém ganhou.");
                                         TimeUnit.SECONDS.sleep(1);
-                                        break;
-                                    case 2:
-                                        System.out.println("Tyler escolheu Papel");
-                                        TimeUnit.SECONDS.sleep(1);
-                                        break;
-                                    case 3:
-                                        System.out.println("Tyler escolheu Tesoura");
-                                        TimeUnit.SECONDS.sleep(1);
-                                        break;
-                                }
-                                switch (kevin) {
-                                    case 1:
-                                        System.out.println("Kevin escolheu Pedra");
-                                        TimeUnit.SECONDS.sleep(1);
-                                        break;
-                                    case 2:
-                                        System.out.println("Kevin escolheu Papel");
-                                        TimeUnit.SECONDS.sleep(1);
-                                        break;
-                                    case 3:
-                                        System.out.println("Kevin escolheu Tesoura");
-                                        TimeUnit.SECONDS.sleep(1);
-                                        break;
-                                }
-                                if (kevin == tyler) {
-                                    System.out.println("Empate! Ninguém ganhou.");
-                                    TimeUnit.SECONDS.sleep(1);
+                                    }
+                                }else{
+                                    System.out.println("Diguite opção apenas de 1 a 3");
+                                    kevin = tyler;
                                 }
                             }catch (InputMismatchException exception){
                                 System.out.println("\nCaracteres não permitido, insira apenas números.\n");
