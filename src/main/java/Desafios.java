@@ -10,7 +10,7 @@ public class Desafios {
         String senha = "";
         int maximoDeDicas = 0;
         while (!senha.equalsIgnoreCase("carvão") && !senha.equalsIgnoreCase("carvao")) {
-            System.out.println("\nDigite a senha: ");
+            System.out.println("\nA senha é uma palavra...Digite-a : ");
             String senhaDoUsuario = sc.next();
             senha = senhaDoUsuario;
             if (!senha.equalsIgnoreCase("carvão") && !senha.equalsIgnoreCase("carvao") && pontos > 0 && maximoDeDicas < 1) {
@@ -42,7 +42,7 @@ public class Desafios {
         int maximoDeDicas2 = 0;
         int acertouDePrimeira = 0;
         do {
-            System.out.println("\nDe quem é a famosa frase “Penso, logo existo”?");
+            System.out.println("\nDigite o nome de quem disse a famosa frase “Penso, logo existo”?");
             pergunta1 = sc.next();
             if (!pergunta1.equalsIgnoreCase("Descartes") && pontos > 0 && maximoDeDicas2 < 1) {
                 System.out.println("Você errou!\n");
@@ -78,6 +78,7 @@ public class Desafios {
                     "\nA) 50" +
                     "\nB) Infinitas" +
                     "\nC) 7");
+            System.out.println("Digite a letra da alternativa correspondente: ");
             pergunta2 = sc.next();
             if (!pergunta2.equalsIgnoreCase("b") && pontos > 0 && maximoDeDicas3 < 1) {
                 acertouDePrimeira2 += 1;
@@ -118,6 +119,7 @@ public class Desafios {
                         "\n1) Pico da neblina" +
                         "\n2) Pico da bandeira" +
                         "\n3) Pedra da mina");
+                System.out.println("Digite o número da alternativa correspondente: ");
                 pergunta3 = sc.nextInt();
                 if (pergunta3 != 1 && pontos > 0 && maximoDeDicas4 < 1) {
                     acertouDePrimeira3 += 1;
@@ -163,7 +165,7 @@ public class Desafios {
         while (senhaDoNotebook != 19042000) {
             try {
 
-                System.out.println("Digite o resultado: ");
+                System.out.println("Digite o resultado numérico: ");
                 int senhaUsuario = sc.nextInt();
                 senhaDoNotebook = senhaUsuario;
                 if (senhaDoNotebook != 19042000 && pontos > 0 && maximoDeDicas5 < 1) {
@@ -207,7 +209,7 @@ public class Desafios {
         int acertouDePrimeira5 = 0;
         while (!cep.equals("01545-001") && !cep.equals("01545001")) {
 
-            System.out.println("Digite o CEP do endereço visto na mensagem anteriormente: ");
+            System.out.println("Digite o número do CEP do endereço visto na mensagem anteriormente: ");
             String cepEndereco = sc.next();
             cep = cepEndereco;
             if (!cep.equals("01545-001") && !cep.equals("01545001") && pontos > 0 && maximoDeDicas6 < 1) {
@@ -254,6 +256,7 @@ public class Desafios {
                 System.out.println("1) 19/03/2000");
                 System.out.println("2) 19/04/2000");
                 System.out.println("3) 19/03/2001");
+                System.out.println("Digite o número da alternativa correspondente: ");
                 int opcaoEscolhida = sc.nextInt();
                 opcaoDesafioNascimento = opcaoEscolhida;
                 if (opcaoDesafioNascimento != 2 && pontos > 0 && maximoDeDicas7 < 1) {
@@ -306,7 +309,7 @@ public class Desafios {
         int acertouDePrimeira7 = 0;
         while (senhaCelular != 1556) {
             try {
-                System.out.println("Qual é senha para acessar o celular da Jade:");
+                System.out.println("Qual é senha para acessar o celular da Jade? Digite a senha numérica: ");
                 senhaCelular = sc.nextInt();
                 if (senhaCelular != 1556 && pontos > 0 && maximoDeDicas8 < 1) {
                     acertouDePrimeira7 += 1;
@@ -349,7 +352,7 @@ public class Desafios {
         int acertouDePrimeira8 = 0;
         while (resposta != 2000) {
             try {
-                System.out.println("Qual é senha para entar no quarto:");
+                System.out.println("Qual é senha para entar no quarto? Digite a senha numérica: ");
                 resposta = sc.nextInt();
                 if (resposta != 2000 && pontos > 0 && maximoDeDicas9 < 1) {
                     acertouDePrimeira8 += 1;
@@ -396,7 +399,7 @@ public class Desafios {
         int acertouDePrimeira9 = 0;
         while (senhaQuarto != 111111 ) {
             try {
-                System.out.println("Qual é senha para entar no quarto:");
+                System.out.println("Qual é senha para entar no quarto? Digite a senha numérica: ");
                 TimeUnit.SECONDS.sleep(2);
                 senhaQuarto = sc.nextInt();
                 if (senhaQuarto != 111111 && pontos > 0 && maximoDeDicas10 < 1) {
@@ -445,7 +448,7 @@ public class Desafios {
         int acertouDePrimeira10 = 0;
         while (!senhaPorta.equalsIgnoreCase("boate-marrom")) {
             try {
-                System.out.println("Qual é senha para entar no quarto:");
+                System.out.println("Qual é senha para entar no quarto? Digite a senha em formato de texto:");
                 senhaPorta = sc.next();
                 if (!senhaPorta.equalsIgnoreCase("boate-marrom") && pontos > 0 && maximoDeDicas11 < 1) {
                     acertouDePrimeira10 += 1;
