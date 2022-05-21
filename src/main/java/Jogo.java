@@ -10,7 +10,6 @@ public class Jogo {
 
         Scanner sc = new Scanner(System.in);
         int iniciar = 0;
-        int decisaoEntrar = 0;
         Desafios desafio = new Desafios();
         do {
             try {
@@ -27,7 +26,7 @@ public class Jogo {
                     case 1:
                         int kevin = 0, tyler = 0, comparar ;
                         System.out.println("LEMBRETE: Você irá passar por desafios durante o jogo... Inicialmente, você tem direito" +
-                                "\na duas dicas. Esse número aumenta se você acertar desafios de primeira, e diminui se você utilizar dicas." +
+                                "\na duas dicas e mas sera  dada apenas uma dica por desafio. Esse número aumenta se você acertar desafios de primeira, e diminui se você utilizar dicas." +
                                 "\n\nBoa sorte e bom jogo! =)");
                         TimeUnit.SECONDS.sleep(3);
                         System.out.println("\n\n...\n");
@@ -204,13 +203,13 @@ public class Jogo {
                                                 "\n2 - Esperar na porta");
                                         entrar = sc.nextInt();
                                     } catch (InputMismatchException exception) {
-                                        System.out.println("Caracteres não permitido, insira apenas números\n");
+                                        System.out.println("\nCaracteres não permitido, insira apenas números");
                                         sc.nextLine();
                                     }
 
-                                } while (decisaoEntrar == entrar);
+                                } while (entrar!=1 && entrar!=2);
                                 if (entrar == 1) {
-                                    System.out.println("Kevin entra e vê Jade tirando a caixa de cima dela e ao tentar ajudar a pegar ");
+                                    System.out.println("\nKevin entra e vê Jade tirando a caixa de cima dela e ao tentar ajudar a pegar\n");
                                     TimeUnit.SECONDS.sleep(3);
                                     System.out.println("os papéis que caíram, Jade diz: “Não preciso de ajuda, não toca nesses papéis!”");
                                     TimeUnit.SECONDS.sleep(3);
@@ -313,12 +312,12 @@ public class Jogo {
                                     }
                                     break;
                                 } else {
-                                    //historia
-                                    System.out.println("\nKevin ouve Tyler saindo do quarto e assustado, se esconde.");
+                                    //historia decisão esperar
+                                    //System.out.println("\nKevin ouve Tyler saindo do quarto e assustado, se esconde.");
                                     TimeUnit.SECONDS.sleep(3);
-                                    System.out.println("Enquanto Kevin se prepara para jogar, Tyler que perdeu no “perguntados”, diz que vai para a cozinha, \n" +
+                                    System.out.println("\nEnquanto Kevin se prepara para jogar, Tyler que perdeu no “perguntados”, diz que vai para a cozinha, \n" +
                                             "nisso Kevin pega o controle e esperar subir vídeo para jogar. \n" +
-                                            "Enquanto Tyler vai para a cozinha, no meio do caminho ele houve um barulho estranho" +
+                                            "\nEnquanto Tyler vai para a cozinha, no meio do caminho ele ouve um barulho estranho" +
                                             "vindo do quarto da sua irmã e vai ver o que está acontecendo \n\n");
                                     TimeUnit.SECONDS.sleep(2);
                                     System.out.println("Tyler: Oooooow, que barulho é esse, vai quebrar a casa é? \n\n");
@@ -329,16 +328,16 @@ public class Jogo {
                                     TimeUnit.SECONDS.sleep(1);
                                     System.out.println("Jade: Uau que idoso... Você é de 1999 e eu de 2000. Se liga!\n\n");
                                     TimeUnit.SECONDS.sleep(1);
-                                    System.out.println("Tyler observa o quarto todos bagunçado, e vê no chão o celular de jade meio escondido no meio de alguns papeis, \n " +
+                                    System.out.println("Tyler observa o quarto todos bagunçado, e vê no chão o celular de jade meio escondido no meio de alguns papeis,\n" +
                                             "então sem jade perceber ele pega o celular dela e vê que tem várias \n " +
                                             "chamadas e mensagens de Kevin e acha estranho.\n\n" +
-                                            "Tyler movido pela sua curiosidade pega o celular de sua irmã");
+                                            "Tyler movido pela sua curiosidade tenta desbloquear o celular.\n");
                                     TimeUnit.SECONDS.sleep(3);
 
                                     //desafio senha do celular
                                     desafio.desafioSenhaCelular();
 
-                                    System.out.println("Tyler vê no celular que pela foto de perfil que não é Kevin mandando as mensagens,\n" +
+                                    System.out.println("\nTyler vê no celular que pela foto de perfil que não é Kevin mandando as mensagens,\n" +
                                             "mas alguém com que Jade já tinha se envolvido no passado e que contribuiu para que ela se envolvesse com coisas erradas\n\n");
                                     TimeUnit.SECONDS.sleep(3);
                                     System.out.println("Tyler: Você voltou a se envolver com esse cara ? Você enlouqueceu!!?\n\n");
@@ -347,8 +346,8 @@ public class Jogo {
                                     TimeUnit.SECONDS.sleep(3);
                                     System.out.println("Tyler: É quando causa problemas para dentro de casa, igual da última vez...\n\n");
                                     TimeUnit.SECONDS.sleep(3);
-                                    System.out.println("Enquanto Tyler e Jade discutem, Kevin  depois de ter voltado do banheiro e ido pro quarto, estava tentando jogar videogame vê que está demorando demais para o jogo iniciar e decide ir atras de Tyler \n " +
-                                            "para avisar que o jogo pode estar com problemas e nisso ele acaba ouvindo a discussão de Tyler e Jade  ");
+                                    System.out.println("Enquanto Tyler e Jade discutem, Kevin  depois de ter voltado do banheiro e ido pro quarto,\nestava tentando jogar videogame vê que está demorando demais para o jogo iniciar e decide ir atras de Tyler\n" +
+                                            "para avisar que o jogo pode estar com problemas e nisso ele acaba ouvindo a discussão de Tyler e Jade\n");
                                     TimeUnit.SECONDS.sleep(3);
                                     System.out.println("Tyler: Por que você voltou a se envolver com ele?\n\n");
                                     TimeUnit.SECONDS.sleep(3);
@@ -365,7 +364,7 @@ public class Jogo {
                                     //desafio senha quarto
                                     desafio.desafioSenhaQuarto();
 
-                                    System.out.println("Kevin: Gente é impossível não ouvir a briga de vocês... me deixa ajudar, eu tenho dinheiro.\n\n");
+                                    System.out.println("\nKevin: Gente é impossível não ouvir a briga de vocês... me deixa ajudar, eu tenho dinheiro.\n\n");
                                     TimeUnit.SECONDS.sleep(3);
                                     System.out.println("Jade pensou rapidamente em usar Kevin tanto para dar o valor da dívida quanto para ir levar o dinheiro, assim ela sairia ilesa da situação. \n" +
                                             "\n" +
@@ -385,7 +384,7 @@ public class Jogo {
                                     //desafio de descriptografar
                                     desafio.desafioCriptografia();
 
-                                    System.out.println("Kevin entra no quarto diz que veio em nome da Jade e está com o dinheiro,\n" +
+                                    System.out.println("\nKevin entra no quarto diz que veio em nome da Jade e está com o dinheiro,\n" +
                                             "o agiota aceita o dinheiro dá um sinal para os dois seguranças pegam Kevin\n" +
                                             "e o arrastam para trás e começa a espancar ele.\n\n");
                                     TimeUnit.SECONDS.sleep(3);
