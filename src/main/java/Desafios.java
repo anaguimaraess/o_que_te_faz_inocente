@@ -11,7 +11,7 @@ public class Desafios {
 
     //logica desse sistema está comentado no segundo desafio, segunda função e padronizado em todas as funções
 
-    public void desafioSeguranca() throws InterruptedException {
+    public void desafioSeguranca() throws InterruptedException { //desafio de adivinhar a charada dada no enigma
         String senha = ""; //senha inicializada com vazio pois o usuario que ira digitar
         int maximoDeDicas = 0;
         while (!senha.equalsIgnoreCase("carvão") && !senha.equalsIgnoreCase("carvao")) { //senha = carvao
@@ -42,7 +42,7 @@ public class Desafios {
         }
     }
 
-    public void desafioPerguntados() throws InterruptedException {
+    public void desafioPerguntados() throws InterruptedException { //desafio de 3 perguntas de conhecimentos gerais
         String pergunta1;
         int maximoDeDicas2 = 0; //sistema que criado para verificar se usuario tem direito a mais dicas
         int acertouDePrimeira = 0; //fizemos verificacao se usuario acertou de primeira, pois se sim, ele ira ganhar mais uma dica.
@@ -163,7 +163,7 @@ public class Desafios {
         } while (pergunta3 != 1);
     }
 
-    public void desafioSenhaNotebook() throws InterruptedException {
+    public void desafioSenhaNotebook() throws InterruptedException { //desafio que usuario ira digitar a senha que eh o aniversario da jade que estavaem binario
         int senhaDoNotebook = 0;
         int maximoDeDicas5 = 0;
         int acertouDePrimeira4 = 0;
@@ -208,7 +208,7 @@ public class Desafios {
     }
 
 
-    public void desafioCep() throws InterruptedException {
+    public void desafioCep() throws InterruptedException { //desafio que usuario digitara cep que foi dado anteriormente atraves das coordenadas,usará o google
         String cep = "";
         int maximoDeDicas6 = 0;
         int acertouDePrimeira5 = 0;
@@ -250,7 +250,7 @@ public class Desafios {
     }
 
 
-    public void desafioSenhaAniversario() throws InterruptedException {
+    public void desafioSenhaAniversario() throws InterruptedException { //desafio que usuario ira escolher opcao certa
         int opcaoDesafioNascimento = 0;
         int maximoDeDicas7 = 0;
         int acertouDePrimeira6 = 0;
@@ -301,7 +301,7 @@ public class Desafios {
 
     }
 
-    public void desafioSenhaCelular() throws InterruptedException {
+    public void desafioSenhaCelular() throws InterruptedException { //desafio que usuario digitara o numero que esta em  nros romanos e converterá
         System.out.println("Para acessar voce terá que descobrir a senha,\n" +
                 "composta por algarismos romanos\n" +
                 "e na seguinte senquencia\n" +
@@ -351,7 +351,7 @@ public class Desafios {
         }
     }
 
-    public void desafioSenhaQuarto() throws InterruptedException {
+    public void desafioSenhaQuarto() throws InterruptedException { //desafio que usuario digitara a senha que eh o numero do ano de nascimento de jade
         int resposta = 0;
         int maximoDeDicas9 = 0;
         int acertouDePrimeira8 = 0;
@@ -395,7 +395,7 @@ public class Desafios {
         }
     }
 
-    public void desafioCoordenadas() throws InterruptedException {
+    public void desafioCoordenadas() throws InterruptedException { //desafio que usuario digitara a senha depois de converter pra binario e pegar só os 1
         System.out.println("Para receber a coordenada : converta a resposta do desafio anterior em \n " +
                 "binário e deixa apenas os valores verdadeiros\n");
 
@@ -445,7 +445,7 @@ public class Desafios {
     }
 
 
-    public void desafioCriptografia() throws InterruptedException {
+    public void desafioCriptografia() throws InterruptedException { //desafio que usuario descriptografará a senha dada em base64
         System.out.println("Dada a senha em criptografada em base64: Ym9hdGUtbWFycm9t ");
 
         String senhaPorta = "";
