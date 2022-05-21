@@ -4,23 +4,28 @@ import java.util.concurrent.TimeUnit;
 
 public class Desafios {
     Scanner sc = new Scanner(System.in);
-    int pontos = 2;
+    int pontos = 2; // os pontos são os numeros de dica que o usuario tem, que pode ser aumentado ou diminuido
+
+    //criamos uma logica basica para verificar se usuario tem direito a usar dicas (1 por desafio) e se acertou de primeira o desafio... assim ganha +dica
+    //as variaveis serao somadas mais 1 ou subtraidas, e os nomes sao padronizados: maximoDeDicas,acertouDePrimeira
+
+    //logica desse sistema está comentado no segundo desafio, segunda função e padronizado em todas as funções
 
     public void desafioSeguranca() throws InterruptedException {
-        String senha = "";
+        String senha = ""; //senha inicializada com vazio pois o usuario que ira digitar
         int maximoDeDicas = 0;
-        while (!senha.equalsIgnoreCase("carvão") && !senha.equalsIgnoreCase("carvao")) {
+        while (!senha.equalsIgnoreCase("carvão") && !senha.equalsIgnoreCase("carvao")) { //senha = carvao
             System.out.println("\nA senha é uma palavra...Digite-a : ");
             String senhaDoUsuario = sc.next();
             senha = senhaDoUsuario;
-            if (!senha.equalsIgnoreCase("carvão") && !senha.equalsIgnoreCase("carvao") && pontos > 0 && maximoDeDicas < 1) {
+            if (!senha.equalsIgnoreCase("carvão") && !senha.equalsIgnoreCase("carvao") && pontos > 0 && maximoDeDicas < 1) { //confirmando se o usuario pode usar dicas ou nao
                 System.out.println("Número de dicas atual:  " + pontos + "\nQuer usar dica? Digite 'sim' ou 'não'");
                 String decisaoSimOuNao = sc.next();
                 if (!decisaoSimOuNao.equalsIgnoreCase("sim") && !decisaoSimOuNao.equalsIgnoreCase("nao") && !decisaoSimOuNao.equalsIgnoreCase("não")) {
                     System.out.println("Responda apenas sim ou não\n");
                 } else {
                     if (decisaoSimOuNao.equalsIgnoreCase("sim")) {
-                        pontos -= 1;
+                        pontos -= 1; //se ele usar dica, o numero atual de dicas diminui
                         System.out.println("Agora seu número atual de dicas é:  " + pontos + "\n");
                         TimeUnit.SECONDS.sleep(1);
                         System.out.println("Dica: Lembre-se do enigma que apareceu anteriormente, a resposta é apenas um substantivo.");
@@ -39,14 +44,14 @@ public class Desafios {
 
     public void desafioPerguntados() throws InterruptedException {
         String pergunta1;
-        int maximoDeDicas2 = 0;
-        int acertouDePrimeira = 0;
+        int maximoDeDicas2 = 0; //sistema que criado para verificar se usuario tem direito a mais dicas
+        int acertouDePrimeira = 0; //fizemos verificacao se usuario acertou de primeira, pois se sim, ele ira ganhar mais uma dica.
         do {
             System.out.println("\nDigite o nome de quem disse a famosa frase “Penso, logo existo”?");
             pergunta1 = sc.next();
             if (!pergunta1.equalsIgnoreCase("Descartes") && pontos > 0 && maximoDeDicas2 < 1) {
                 System.out.println("Você errou!\n");
-                acertouDePrimeira += 1;
+                acertouDePrimeira += 1; //aqui somamos 1 o valor da variavel e se ela for >1 na linha 67, n somara pontos de dicas
                 System.out.println("Número de dicas atual:  " + pontos + "\nQuer usar dica? Digite 'sim' ou 'não'");
                 String decisaoSimOuNao = sc.next();
                 if (!decisaoSimOuNao.equalsIgnoreCase("sim") && !decisaoSimOuNao.equalsIgnoreCase("nao") && !decisaoSimOuNao.equalsIgnoreCase("não")) {

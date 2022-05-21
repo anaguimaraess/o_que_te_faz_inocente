@@ -6,6 +6,8 @@ import java.util.concurrent.TimeUnit;
 public class Jogo {
     //Menu do jogo com 5 opções para o jogador.//
     public static void main(String[] args) throws InterruptedException {
+        //utilizamos o TimeUnit como forma de deixar o aparecimento dos prints mais lento, assim usuario pode acompanhar melhor
+
         Scanner sc = new Scanner(System.in);
         int iniciar = 0;
         int decisaoEntrar = 0;
@@ -24,6 +26,12 @@ public class Jogo {
                 switch (iniciar) {
                     case 1:
                         int kevin = 0, tyler = 0, comparar ;
+                        System.out.println("LEMBRETE: Você irá passar por desafios durante o jogo... Inicialmente, você tem direito" +
+                                "\na duas dicas. Esse número aumenta se você acertar desafios de primeira, e diminui se você utilizar dicas." +
+                                "\n\nBoa sorte e bom jogo! =)");
+                        TimeUnit.SECONDS.sleep(3);
+                        System.out.println("\n\n...\n");
+                        TimeUnit.SECONDS.sleep(4);
                         System.out.println("\nDurante uma tarde de verão, enquanto Kevin jogava Perguntados online com seu amigo Tyler," +
                                 "\nsua mãe pede para que ele pause o jogo online para que ela possa limpar a mesa, ele acaba se irritando" +
                                 "\ncom isso e seu amigo Tyler ouve e o convida para ir até sua casa, ele aceita e vai," +
@@ -39,7 +47,7 @@ public class Jogo {
                                 + "Ai a gente decide quem joga primeiro no Jokenpô. \n");
                         TimeUnit.SECONDS.sleep(1);
 
-                        System.out.println("____JOKENPÔ____\n");
+                        System.out.println("____JOKENPÔ____\n"); //usuario digita opcao e random escolhe outra, e assim vemos quem ganhou para ver qual rumo a historia terá
                         System.out.println("1 - Pedra");
                         System.out.println("2 - Papel");
                         System.out.println("3 - Tesoura");
@@ -48,7 +56,7 @@ public class Jogo {
                             try {
                                 System.out.println("\nKevin digite a sua opção:\n ");
                                 kevin = sc.nextInt();
-                                tyler = (int) (Math.random() * 3 + 1);
+                                tyler = (int) (Math.random() * 3 + 1); //random eh utilizado para sorteio de opcao
                                 if (kevin >= 1 && kevin <= 3){
                                     switch (tyler) {
                                         case 1:
@@ -94,6 +102,7 @@ public class Jogo {
 
                         switch (comparar) {
                             case 1:
+                                //historia 1, apenas prints
                                 System.out.println("\n\nKevin depois de perder, sair do quarto e no corredor se encontra com Jade que o chama e pede um favor,\n" +
                                         "Jade pede para que ele vá até o seu quarto para pegar uma caixa em cima do guarda-roupas, " +
                                         "\nporque ela não alcança.\n" +
@@ -121,12 +130,16 @@ public class Jogo {
                                         "ao chegar lá o segurança encara Kevin e pergunta o que ele quer, Kevin pede para entrar e o segurança solicita a senha de entrada.\n");
                                 TimeUnit.SECONDS.sleep(4);
 
+                                //desafio para seguir a historia
                                 desafio.desafioSeguranca();
 
+                                //continuacao da historia
                                 System.out.println("\nKevin entra e procura por Jade, vê ela conversando com um homem suspeito e com uma expressão de medo, \n" +
                                         "com isso ele deduz que aquele seja a pessoa para a qual ela está devendo.\n\n" +
                                         "Kevin quer chegar em Jade de alguma forma, e decide procurar uma forma de chamar a atenção.\n");
                                 TimeUnit.SECONDS.sleep(3);
+
+                                //decisao que ocorre na boate
                                 int escolhaNaBoate = 0;
                                 while (escolhaNaBoate == 0) {
                                     try {
@@ -161,6 +174,7 @@ public class Jogo {
                             }
                                 break;
 
+                                //continuacao da historia
                             case 2:
                                 TimeUnit.SECONDS.sleep(2);
                                 System.out.println("\nKevin começa a jogar, e distraído, começa a pensar na Jade");
@@ -173,6 +187,7 @@ public class Jogo {
 
                                 System.out.println("Responda as próximas perguntas do jogo para poder finalizar.");
 
+                                //desafio perguntados
                                 desafio.desafioPerguntados();
 
                                 System.out.println("\nPensamento do Kevin: “Ufa, consegui terminar o jogo, agora vou falar que vou ao banheiro”.");
@@ -183,7 +198,7 @@ public class Jogo {
                                 int entrar = 0;
                                 do {
                                     try {
-
+                                        //decisao se entra ou nao no quarto
                                         System.out.println("\nEscolha qual decisão você quer: " +
                                                 "\n1 - Entrar no quarto" +
                                                 "\n2 - Esperar na porta");
@@ -208,6 +223,7 @@ public class Jogo {
                                     System.out.println("Para acessar o notebook... Converta 1001000101000111011010000 binário para decimal.");
                                     TimeUnit.SECONDS.sleep(3);
 
+                                    //desafio senha do notebook
                                     desafio.desafioSenhaNotebook();
 
                                     System.out.println("Mensagem do notebook:'Me encontre no -23.5799640010158, -46.616640581488824’.");
@@ -223,6 +239,7 @@ public class Jogo {
                                     System.out.println("Kevin aceita por estar apaixonado por Jade. No carro ele precisa colocar da localização, mas o GPS só aceita CEP.\n");
                                     TimeUnit.SECONDS.sleep(3);
 
+                                    //desafio cep
                                     desafio.desafioCep();
 
                                     System.out.println("Durante o caminho, Kevin não resiste e acaba perguntando para Jade o que está acontecendo”.\n\n");
@@ -242,6 +259,7 @@ public class Jogo {
                                     System.out.println("Segurança: Então me fala a data de nascimento dela.\n\n");
                                     TimeUnit.SECONDS.sleep(3);
 
+                                    //desafio aniversario
                                     desafio.desafioSenhaAniversario();
 
                                     System.out.println("Kevin entra com a data de nascimento correta, ao entrar ele procura por Jade,");
@@ -253,6 +271,7 @@ public class Jogo {
                                     System.out.println("a qual ela está devendo, Kevin quer chegar em Jade de alguma forma, e decide procurar uma forma de chamar a atenção.");
                                     TimeUnit.SECONDS.sleep(3);
 
+                                    //decisao do usuario
                                     int decisaoParaAgir = 0;
                                     while (decisaoParaAgir == 0) {
                                         try {
@@ -266,7 +285,7 @@ public class Jogo {
                                                 TimeUnit.SECONDS.sleep(1);
                                                 System.out.println("POW! ");
                                                 TimeUnit.SECONDS.sleep(2);
-                                                System.out.println("\n\nFIM DE JOGO!\n");
+                                                System.out.println("\n\nFIM DE JOGO!\n"); //fim
 
                                             } else if (decisaoDigitada == 2) {
                                                 decisaoParaAgir = 2;
@@ -294,6 +313,7 @@ public class Jogo {
                                     }
                                     break;
                                 } else {
+                                    //historia
                                     System.out.println("\nKevin ouve Tyler saindo do quarto e assustado, se esconde.");
                                     TimeUnit.SECONDS.sleep(3);
                                     System.out.println("Enquanto Kevin se prepara para jogar, Tyler que perdeu no “perguntados”, diz que vai para a cozinha, \n" +
@@ -315,6 +335,7 @@ public class Jogo {
                                             "Tyler movido pela sua curiosidade pega o celular de sua irmã");
                                     TimeUnit.SECONDS.sleep(3);
 
+                                    //desafio senha do celular
                                     desafio.desafioSenhaCelular();
 
                                     System.out.println("Tyler vê no celular que pela foto de perfil que não é Kevin mandando as mensagens,\n" +
@@ -341,6 +362,7 @@ public class Jogo {
                                             "Para que Kevin entre no quarto resolva o desafio.\n");
                                     TimeUnit.SECONDS.sleep(3);
 
+                                    //desafio senha quarto
                                     desafio.desafioSenhaQuarto();
 
                                     System.out.println("Kevin: Gente é impossível não ouvir a briga de vocês... me deixa ajudar, eu tenho dinheiro.\n\n");
@@ -349,6 +371,7 @@ public class Jogo {
                                             "\n" +
                                             "Kevin por estar apaixonado por Jade, aceita a proposta de ajuda e ouve ela explicar onde seria o local que o agita estaria. \n");
 
+                                    //desafio coordenadas
                                     desafio.desafioCoordenadas();
 
                                     System.out.println("Jade passa as coordenadas do local do agiota para Kevin, ele dirige,\n" +
@@ -359,6 +382,7 @@ public class Jogo {
                                     TimeUnit.SECONDS.sleep(3);
                                     System.out.println("Kevin segue o corredor e vai até a porta que possui criptografia.\n");
 
+                                    //desafio de descriptografar
                                     desafio.desafioCriptografia();
 
                                     System.out.println("Kevin entra no quarto diz que veio em nome da Jade e está com o dinheiro,\n" +
@@ -389,7 +413,7 @@ public class Jogo {
                         }
                         break;
 
-                    case 2:
+                    case 2: //instrucoes
                         System.out.println("\n  <<Aqui vai algumas informações básicas sobre o jogo.>>\n"
                                 + "\n<======================================================================================================================================================>\n"
                                 + "  Opa, tudo bem, nós somos o grupo 10 e esse é o nosso projeto, "
@@ -401,7 +425,7 @@ public class Jogo {
                                 + "\n<======================================================================================================================================================>\n\n");
                         TimeUnit.SECONDS.sleep(4);
                         break;
-                    case 3:
+                    case 3:// info dos personagens
                         System.out.println("<<Opa, aqui você encontrar algumas informações sobre os personagens do nosso jogo e também algumas curiosidades!>>"
                                 + "\nPersonagens:\n"
                                 + "\n<================================================================================================================================================>\n"
@@ -417,7 +441,7 @@ public class Jogo {
                         TimeUnit.SECONDS.sleep(4);
                         break;
 
-                    case 4:
+                    case 4: //creditos
                         System.out.println("Opa, tudo bem, nós somos o grupo 10 e esse é o nosso projeto, "
                                 + "ele é um jogo de suspense onde você acompanha a história de 3 personagens, "
                                 + "\ncada um deles com sua personalidade própria, caso aja curiosidades, "
@@ -438,7 +462,7 @@ public class Jogo {
                         TimeUnit.SECONDS.sleep(4);
                         break;
 
-                    case 5:
+                    case 5: //encerrar sessao
                         System.out.println("|===============|\n Jogo encerrado!\n|===============|\n  Até a próxima!\n      ^-^\n|===============|");
                         TimeUnit.SECONDS.sleep(1);
                         break;
@@ -447,7 +471,7 @@ public class Jogo {
                         TimeUnit.SECONDS.sleep(3);
                         break;
                 }
-            } catch (InputMismatchException exception) {
+            } catch (InputMismatchException exception) { //tratamento de menu
                 System.out.println("\nCaracteres não permitidos, insira apenas números.\n");
                 TimeUnit.SECONDS.sleep(2);
                 sc.nextLine();
