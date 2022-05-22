@@ -210,13 +210,13 @@ public class Jogo {
 
                                 } while (entrar!=1 && entrar!=2);
                                 if (entrar == 1) {
-                                    System.out.println("\nKevin entra e vê Jade tirando a caixa de cima dela e ao tentar ajudar a pegar");
+                                    System.out.println("\nKevin entra e vê Jade tirando a caixa de cima dela e ao tentar ajudar a pegar os papéis que caíram\n\n");
                                     TimeUnit.SECONDS.sleep(3);
-                                    System.out.println("os papéis que caíram, Jade diz: “Não preciso de ajuda, não toca nesses papéis!”");
+                                    System.out.println("Jade: Não preciso de ajuda, não toca nesses papéis!\n");
                                     TimeUnit.SECONDS.sleep(3);
-                                    System.out.println("pega os papéis, guarda de volta na caixa e sai, dizendo “Espere aqui, não se mexe!”");
+                                    System.out.println("Jade pega os papéis, guarda de volta na caixa e sai, dizendo “Espere aqui, não se mexe!”\n");
                                     TimeUnit.SECONDS.sleep(3);
-                                    System.out.println("\nKevin estranha o surto que ela teve e na mesma hora o notebook dela faz um barulho de notificação bem alto.");
+                                    System.out.println("Kevin estranha o surto que ela teve e na mesma hora o notebook dela faz um barulho de notificação bem alto.");
                                     TimeUnit.SECONDS.sleep(3);
                                     System.out.println("Curioso, Kevin tenta desbloquear o notebook para ler a mensagem. ");
                                     TimeUnit.SECONDS.sleep(3);
@@ -226,7 +226,7 @@ public class Jogo {
                                     //desafio senha do notebook
                                     desafio.desafioSenhaNotebook();
 
-                                    System.out.println("Mensagem do notebook:Me encontre no -23.5799640010158, -46.616640581488824.");
+                                    System.out.println("\nMensagem do notebook:Me encontre no -23.5799640010158, -46.616640581488824.\n");
                                     System.out.println("Kevin fica confuso com a mensagem, mas fecha tudo rapidamente para Jade não notar que ele viu. ");
                                     TimeUnit.SECONDS.sleep(3);
                                     System.out.println("Jade volta para o quarto e vai ler a mensagem que tinha chegado, mas percebe já estava marcada como “lida”. ");
@@ -242,7 +242,7 @@ public class Jogo {
                                     //desafio cep
                                     desafio.desafioCep();
 
-                                    System.out.println("Durante o caminho, Kevin não resiste e acaba perguntando para Jade o que está acontecendo”.\n\n");
+                                    System.out.println("\nDurante o caminho, Kevin não resiste e acaba perguntando para Jade o que está acontecendo”.\n\n");
                                     TimeUnit.SECONDS.sleep(3);
                                     System.out.println("Jade: A verdade é que eu estou devendo para um agiota, mas ninguém pode saber disso, então não se mete!”.\n\n");
                                     TimeUnit.SECONDS.sleep(3);
@@ -262,7 +262,7 @@ public class Jogo {
                                     //desafio aniversario
                                     desafio.desafioSenhaAniversario();
 
-                                    System.out.println("Kevin entra com a data de nascimento correta, ao entrar ele procura por Jade,");
+                                    System.out.println("\nKevin entra com a data de nascimento correta, ao entrar ele procura por Jade,");
                                     TimeUnit.SECONDS.sleep(3);
                                     System.out.println("e vê ela conversando com um homem suspeito em uma área privada na parte de cima da boate,");
                                     TimeUnit.SECONDS.sleep(3);
@@ -275,13 +275,13 @@ public class Jogo {
                                     int decisaoParaAgir = 0;
                                     while (decisaoParaAgir == 0) {
                                         try {
-                                            System.out.println("O que Kevin deve fazer? ");
+                                            System.out.println("\nO que Kevin deve fazer? ");
                                             System.out.println("1) Tentar avançar para enfrentar o Agiota.\n" +
                                                     "2) Chegar de forma discreta para negociar com o agiota e pagar a dívida de Jade.\n");
                                             int decisaoDigitada = sc.nextInt();
                                             if (decisaoDigitada == 1) {
                                                 decisaoParaAgir = 1;
-                                                System.out.println("Kevin tenta avançar no agiota mas o mesmo rapidamente se defende, atirando em Kevin.");
+                                                System.out.println("\nKevin tenta avançar no agiota mas o mesmo rapidamente se defende, atirando em Kevin.");
                                                 TimeUnit.SECONDS.sleep(1);
                                                 System.out.println("POW! ");
                                                 TimeUnit.SECONDS.sleep(2);
@@ -289,16 +289,17 @@ public class Jogo {
 
                                             } else if (decisaoDigitada == 2) {
                                                 decisaoParaAgir = 2;
-                                                System.out.println("O Agiota, após receber a transferência, decide liberar os dois, eles saem e vão para o carro em silencio, quando chegam no carro, Jade pergunta o porquê de ele ter feito isso e Kevin diz:\n\n");
+                                                System.out.println("\nO Agiota, após receber a transferência, decide liberar os dois, eles saem e vão para o carro em silencio,\n" +
+                                                        " quando chegam no carro, Jade pergunta o porquê de ele ter feito isso e Kevin diz:\n\n");
                                                 TimeUnit.SECONDS.sleep(3);
                                                 System.out.println("Kevin: Eu vi que você precisava de ajuda, e eu não consigo ver alguém que eu gosto nesse tipo de situação.\n\n");
                                                 TimeUnit.SECONDS.sleep(3);
                                                 System.out.println("Jade: Você é uma pessoa muito especial e eu agradeço o que você fez, mas infelizmente você sabe demais.\n\n");
                                                 TimeUnit.SECONDS.sleep(3);
                                                 System.out.println("\nPOW! POW! ");
-                                                TimeUnit.SECONDS.sleep(3);
+                                                TimeUnit.SECONDS.sleep(4);
                                                 System.out.println("\n\nFIM DE JOGO!\n");
-                                                TimeUnit.SECONDS.sleep(3);
+                                                TimeUnit.SECONDS.sleep(4);
 
                                             } else {
                                                 decisaoParaAgir = 0;
@@ -314,12 +315,12 @@ public class Jogo {
                                     break;
                                 } else {
                                     //historia decisão esperar
-                                    //System.out.println("\nKevin ouve Tyler saindo do quarto e assustado, se esconde.");
+                                    System.out.println("\nKevin ouve o barulho da porta do quarto de Tyler abrindo, se assusta e sair da frente do quarto da Jade rapidamente,\n" +
+                                            "como se nada tivesse acontecido. E entra pró quarto do seu amigo.");
                                     TimeUnit.SECONDS.sleep(3);
-                                    System.out.println("\nEnquanto Kevin se prepara para jogar, Tyler que perdeu no “perguntados”, diz que vai para a cozinha, \n" +
-                                            "nisso Kevin pega o controle e esperar subir vídeo para jogar. \n" +
-                                            "\nEnquanto Tyler vai para a cozinha, no meio do caminho ele ouve um barulho estranho" +
-                                            "vindo do quarto da sua irmã e vai ver o que está acontecendo \n\n");
+                                    System.out.println("Depois de um tempo, enquanto Kevin esta jogando, Tyler que esta esperando sua vez, diz que vai na cozinha.\n");
+                                    System.out.println("Tyler sair do quarto e vai para a cozinha, no meio do caminho ele ouve um barulho estranho,\n" +
+                                            "vindo do quarto da sua irmã e vai ver o que está acontecendo...\n\n");
                                     TimeUnit.SECONDS.sleep(2);
                                     System.out.println("Tyler: Oooooow, que barulho é esse, vai quebrar a casa é? \n\n");
                                     TimeUnit.SECONDS.sleep(1);
@@ -340,15 +341,15 @@ public class Jogo {
 
                                     System.out.println("\nTyler vê no celular que pela foto de perfil que não é Kevin mandando as mensagens,\n" +
                                             "mas alguém com que Jade já tinha se envolvido no passado e que contribuiu para que ela se envolvesse com coisas erradas\n\n");
-                                    TimeUnit.SECONDS.sleep(3);
+                                    TimeUnit.SECONDS.sleep(4);
                                     System.out.println("Tyler: Você voltou a se envolver com esse cara ? Você enlouqueceu!!?\n\n");
                                     TimeUnit.SECONDS.sleep(3);
                                     System.out.println("Jade: Não é da sua conta o que eu faço da minha vida!\n\n");
                                     TimeUnit.SECONDS.sleep(3);
                                     System.out.println("Tyler: É quando causa problemas para dentro de casa, igual da última vez...\n\n");
                                     TimeUnit.SECONDS.sleep(3);
-                                    System.out.println("Enquanto Tyler e Jade discutem, Kevin  depois de ter voltado do banheiro e ido pro quarto,\nestava tentando jogar videogame vê que está demorando demais para o jogo iniciar e decide ir atras de Tyler\n" +
-                                            "para avisar que o jogo pode estar com problemas e nisso ele acaba ouvindo a discussão de Tyler e Jade\n");
+                                    System.out.println("Enquanto Tyler e Jade discutem, Kevin que estava jogando e do nada o videogame travou e decide ir atras de Tyler,\n" +
+                                            "para avisar que o jogo pode estar com problemas e nisso ele acaba ouvindo a discussão de Tyler e Jade...\n\n");
                                     TimeUnit.SECONDS.sleep(3);
                                     System.out.println("Tyler: Por que você voltou a se envolver com ele?\n\n");
                                     TimeUnit.SECONDS.sleep(3);

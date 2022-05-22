@@ -172,7 +172,7 @@ public class Desafios {
         while (senhaDoNotebook != 19042000) {
             try {
 
-                System.out.println("Digite o resultado numérico: ");
+                System.out.println("\nDigite o resultado numérico: ");
                 int senhaUsuario = sc.nextInt();
                 senhaDoNotebook = senhaUsuario;
                 if (senhaDoNotebook != 19042000 && pontos > 0 && maximoDeDicas5 < 1) {
@@ -239,7 +239,7 @@ public class Desafios {
                         System.out.println("\nOk...\n");
                     }
                 }
-            } else if (cep.equals("01545-001") && cep.equals("01545001")) {
+            } else if (cep.equals("01545-001") || cep.equals("01545001")) {
                 System.out.println("Certa resposta!");
                 TimeUnit.SECONDS.sleep(2);
                 if (acertouDePrimeira5 == 0) {
