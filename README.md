@@ -8,3 +8,6 @@ Esse projeto é um programa no formato de jogo RPG que funciona no terminal. O t
 INTEGRANTES:
 <br /> 
 Ana Carolina Guimarães (eu), Daniel Augusto Magalhães, Cleiton Ribeiro, Jenifer Mirela e Barbara Vitoria.
+<br />
+<br />
+Necessário utilizar JDK 11. 
