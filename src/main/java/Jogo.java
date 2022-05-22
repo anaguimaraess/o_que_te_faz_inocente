@@ -26,7 +26,8 @@ public class Jogo {
                     case 1:
                         int kevin = 0, tyler = 0, comparar ;
                         System.out.println("LEMBRETE: Você irá passar por desafios durante o jogo... Inicialmente, você tem direito" +
-                                "\na duas dicas e mas sera  dada apenas uma dica por desafio. Esse número aumenta se você acertar desafios de primeira, e diminui se você utilizar dicas." +
+                                "\na duas dicas mas lembre-se que em um desafio você só pode usar UMA dica." +
+                                "\nEsse número de dicas aumenta se você acertar desafios de primeira, e diminui se você utilizar essas ajudas." +
                                 "\n\nBoa sorte e bom jogo! =)");
                         TimeUnit.SECONDS.sleep(3);
                         System.out.println("\n\n...\n");
@@ -209,7 +210,7 @@ public class Jogo {
 
                                 } while (entrar!=1 && entrar!=2);
                                 if (entrar == 1) {
-                                    System.out.println("\nKevin entra e vê Jade tirando a caixa de cima dela e ao tentar ajudar a pegar\n");
+                                    System.out.println("\nKevin entra e vê Jade tirando a caixa de cima dela e ao tentar ajudar a pegar");
                                     TimeUnit.SECONDS.sleep(3);
                                     System.out.println("os papéis que caíram, Jade diz: “Não preciso de ajuda, não toca nesses papéis!”");
                                     TimeUnit.SECONDS.sleep(3);
@@ -219,18 +220,18 @@ public class Jogo {
                                     TimeUnit.SECONDS.sleep(3);
                                     System.out.println("Curioso, Kevin tenta desbloquear o notebook para ler a mensagem. ");
                                     TimeUnit.SECONDS.sleep(3);
-                                    System.out.println("Para acessar o notebook... Converta 1001000101000111011010000 binário para decimal.");
+                                    System.out.println("Para acessar o notebook, é necessário digitar a data de nascimento de Jade... Converta 1001000101000111011010000 binário para decimal para obter essa data.");
                                     TimeUnit.SECONDS.sleep(3);
 
                                     //desafio senha do notebook
                                     desafio.desafioSenhaNotebook();
 
-                                    System.out.println("Mensagem do notebook:'Me encontre no -23.5799640010158, -46.616640581488824’.");
+                                    System.out.println("Mensagem do notebook:Me encontre no -23.5799640010158, -46.616640581488824.");
                                     System.out.println("Kevin fica confuso com a mensagem, mas fecha tudo rapidamente para Jade não notar que ele viu. ");
                                     TimeUnit.SECONDS.sleep(3);
                                     System.out.println("Jade volta para o quarto e vai ler a mensagem que tinha chegado, mas percebe já estava marcada como “lida”. ");
                                     TimeUnit.SECONDS.sleep(3);
-                                    System.out.println("Jade se enfurece, mas usa isso ao seu favor, já que ela não sabe dirigir, e diz para Kevin:\n");
+                                    System.out.println("Jade se enfurece, mas usa isso ao seu favor já que ela não sabe dirigir.\n");
                                     TimeUnit.SECONDS.sleep(3);
                                     System.out.println("\nJade: Vamos, agora que sei que você leu a mensagem que chegou para mim," +
                                             "\nvocê vai ter que me ajudar, me leva nesse endereço!”\n\n");

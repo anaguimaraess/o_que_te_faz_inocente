@@ -359,7 +359,6 @@ public class Desafios {
         int acertouDePrimeira8 = 0;
         while (resposta != 2000) {
             try {
-                System.out.println("Sabendo que a senha foi mostrada em alguma parte da historia.\n");
                 System.out.println("Qual é a senha para entar no quarto? Digite a senha numérica: ");
                 resposta = sc.nextInt();
                 if (resposta != 2000 && pontos > 0 && maximoDeDicas9 < 1) {
@@ -399,7 +398,7 @@ public class Desafios {
     }
 
     public void desafioCoordenadas() throws InterruptedException { //desafio que usuario digitara a senha depois de converter pra binario e pegar só os 1
-        System.out.println("Para receber a coordenada : converta a resposta do desafio anterior em \n " +
+        System.out.println("Para receber as coordenadas, converta a resposta do desafio anterior em \n" +
                 "binário e deixa apenas os valores verdadeiros\n");
 
         int senhaQuarto = 0;
