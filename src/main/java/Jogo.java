@@ -448,14 +448,13 @@ public class Jogo {
                                 + "O nosso jogo é um suspense onde as decisões do usuário definem o rumo que a história vai seguir,\n"
                                 + "com isso na história há elementos que o usuário precisara lembrar para responder a momentos decisivos ou desafios que surgem durante o decorrer do jogo."
                                 + "\n<======================================================================================================================================================>\n\n");
-                        TimeUnit.SECONDS.sleep(4);
                         break;
                     case 3:// info dos personagens
                         System.out.println("<<Opa, aqui você encontrar algumas informações sobre os personagens do nosso jogo e também algumas curiosidades!>>"
                                 + "\nPersonagens:\n"
                                 + "\n<================================================================================================================================================>\n"
                                 + "Jade: \n   É uma garota de 18 anos, arrogante, egoista e que em algum momento de sua vida se envolveu com uma galera barra pesada,\n" +
-                                "e com isso arrumou muitos problemas e dito isso são esses problemas que vão direcionar a história do jogo. "
+                                "e com isso arrumou muitos problemas e dito isso são esses problemas que vão direcionar a história do jogo. Apesar de tudo, ama sua mãe Maria. "
                                 + "\n<================================================================================================================================================>\n "
                                 + "Kevin: \n   É um garoto de 17 anos, é um bom rapaz, que sempre busca ajudar as pessoas que ele gosta da forma como pode, "
                                 + "\ntem Tyler como seu melhor amigo e companheiro em jogos multiplayer."
@@ -463,7 +462,6 @@ public class Jogo {
                                 + "Tyler: \n   É um garoto de 17 anos, viciado em jogos e animes, apaixonado por tecnologia,\n"
                                 + " é o melhor amigo de Kevin e o irmão mais novo da Jade é aquele cara que só quer jogar seu jogo em paz, mas acaba sendo arrastado para toda a trama do jogo."
                                 + "\n<================================================================================================================================================>\n");
-                        TimeUnit.SECONDS.sleep(4);
                         break;
 
                     case 4: //creditos
@@ -484,16 +482,13 @@ public class Jogo {
                                 + "\n->Jenifer Mirela Sousa Alves\n"
                                 + "<===========================================>\n"
                                 + "\n<<Nosso jogo foi criado com muito entusiamos, carinho e dedicação, esperamos que você se divirta jogando igual a nós programando! (>.<).>>\n");
-                        TimeUnit.SECONDS.sleep(4);
                         break;
 
                     case 5: //encerrar sessao
                         System.out.println("|===============|\n Jogo encerrado!\n|===============|\n  Até a próxima!\n      ^-^\n|===============|");
-                        TimeUnit.SECONDS.sleep(1);
                         break;
                     default:
                         System.out.println("Opção inválida");
-                        TimeUnit.SECONDS.sleep(3);
                         break;
                 }
             } catch (InputMismatchException exception) { //tratamento de menu
